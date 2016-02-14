@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>  Styleguide</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../_sv_custom.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">Styleguide</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+
+        <div class="hgt-column ">
+          <div class="hgt-content">
+<h1>Hologram Github Theme</h1>
+<p class="styleguide">This is a very simple <a class="styleguide" href="https://github.com/styleguide" title="https://github.com/styleguide">Github Styleguide</a> inspired theme for Trulia&#39;s <a class="styleguide" href="https://github.com/trulia/hologram" title="https://github.com/trulia/hologram">Hologram</a>, the ruby front-end doc generator.</p>
+<h2>Preview</h2>
+<p class="styleguide"><img src="example.png?raw=true" alt="Example"></p><p class="styleguide"><a class="styleguide" href="http://wearecube.github.io/hologram-github-theme-example/styleguide" title="http://wearecube.github.io/hologram-github-theme-example/styleguide">Visit example styleguide</a></p>
+<h2>Usage</h2>
+<p class="styleguide">Install Hologram:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ gem install hologram</pre>
+  </div>
+</div><p class="styleguide">Add this theme to your project using NPM:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ npm install --save-dev hologram-github-theme</pre>
+  </div>
+</div><p class="styleguide">Alternatively you may use Bower:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ bower install --save-dev hologram-github-theme</pre>
+  </div>
+</div><p class="styleguide">Define the theme in your <code class="styleguide">hologram_config.yml</code>:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre># Relative path(s) to your source files
+source: app/styles
+
+# Relative path where you want the documentation to be built
+destination: styleguide
+
+# The path that contains supporting assets for the documentation page
+documentation_assets: node_modules/hologram-github-theme
+
+# Category that will be used as the index.html (optional)
+index: styleguide
+
+# A list of relative paths to folders containing any dependencies to copy
+dependencies:
+  - 'dist'
+
+# The CSS files to be included in the styleguide
+css_include:
+  - 'dist/styles/vendor.css'
+  - 'dist/styles/main.css'
+
+# The JavaScript files to included in the styleguide
+js_include:
+  - 'dist/scripts/main.js'
+
+# The global title that is displayed at the top of the pages
+global_title: Styleguide</pre>
+  </div>
+</div><p class="styleguide">In this example the markdown file <code class="styleguide">app/styles/styleguide.md</code> is used for the content on the index page. Also, if you&#39;re using Bower, adjust the package path accordingly: <code class="styleguide">documentation_assets: bower_components/hologram-github-theme</code>.</p><p class="styleguide">For more details on the options, checkout the <a class="styleguide" href="https://github.com/trulia/hologram/blob/master/README.md#creating-a-yaml-config-file" title="https://github.com/trulia/hologram/blob/master/README.md#creating-a-yaml-config-file">Hologram documentation</a></p><p class="styleguide">Finally, build the styleguide:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>hologram -c hologram_config.yml</pre>
+  </div>
+</div>
+<h2>Authors</h2>
+<p class="styleguide">The Hologram Github Theme has been created by <a class="styleguide" href="https://github.com/hupf" title="https://github.com/hupf">Mathis Hofer</a>. Many thanks to <a class="styleguide" href="https://github.com/minimalweb" title="https://github.com/minimalweb">Maurice Kühlborn</a> and <a class="styleguide" href="https://github.com/obartra" title="https://github.com/obartra">Oscar</a> for their contributions.</p>
+<h2>License</h2>
+<p class="styleguide">The Hologram Github Theme is licensed under the <a class="styleguide" href="LICENSE" title="LICENSE">MIT License</a></p>        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+
+  
+</body>
+</html>
