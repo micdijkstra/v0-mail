@@ -1,0 +1,17 @@
+@import 'rails-sass-images';
+/*
+
+        Creating a sprite from following images:
+        
+        _sv/_sprite/empty.png (1x1)
+
+        Output files:
+          _sv/_sv_sprite.png
+          _sv/_sprite.scss
+
+        Output size:
+          41x41
+
+
+*/
+.sprite-empty { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (20px/-2) (20px/-2); height: (1px/2) + 1px; width: (1px/2) + 1px;}
