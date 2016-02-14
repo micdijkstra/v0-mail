@@ -20,6 +20,9 @@ css_include:
 ignore_paths:
   - "*stencil*"
 
+custom_extensions:
+  - ".html"
+
 # To output navigation for top level sections, set the value to
 # 'section'. To output navigation for sub-sections, set the value to `all`
 nav_level: section

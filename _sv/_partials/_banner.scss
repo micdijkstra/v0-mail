@@ -1,0 +1,33 @@
+/*doc
+ ---
+ title: Banner
+ name: banner
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container full">
+          <tr>
+            <td>
+              <a href="#" class="u-hidden-lap" target="_blank">
+                <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+              </a>
+
+              <a href="#" class="u-hidden-mobile" target="_blank">
+                <img src="http://placehold.it/500x500&text=Dekstop%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+              </a>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/

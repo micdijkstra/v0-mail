@@ -1,0 +1,78 @@
+/*doc
+ ---
+ title: Flag
+ name: flag
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+              <table class="flag">
+                <tr>
+                  <td class="flag-body">&nbsp;</td>
+
+                  <td class="flag-image">
+                    <a href="#" target="_blank"><img src="http://placehold.it/150x150&text=Centered%20Image" alt="Alt" class="u-responsive u-responsive--full" /></a>
+                  </td>
+
+                  <td class="flag-body">
+                    <div><a href="#" target="_blank">Some Girl</a></div>
+                    <div>Venture Partner at<br /><a href="#" target="_blank">A Good Company</a></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+
+.flag {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.flag-image {
+  max-width: 220px;
+  min-width: 220px;
+  width: auto;
+
+  @include mobile {
+    max-width: 170px !important;
+    min-width: 170px !important;
+  }
+
+  @include lap {
+    max-width: 270px !important;
+    min-width: 270px !important;
+  }
+}
+
+.flag-body {
+  width: 50%;
+  vertical-align: middle;
+
+  &:first-child {
+    @include mobile {
+      max-width: 0px !important;
+      min-width: 0px !important;
+      width: auto !important;
+    }
+  }
+
+  &:last-child {
+    @include mobile {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,15 +1,88 @@
-/* Small Victories Sprockets File
- *
- * Any CSS and SCSS file within this directory and your sass directory
- * can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- * Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
- * about supported directives.
- *
- *= require_tree .
+/* v0
  */
+
+/* Variables
+ *  - - - - - - - - - - - - - - - - */
+$color-base:                             #000;
+
+/*doc
+ ---
+ title: Stencil
+ name: stencil
+ category: Libraries
+ ---
+
+[Stencil Mail](http://dijkstra.io/stencil-mail/docs/) has been included.
+*/
+
+@import '_lib/stencil/stencil';
+
+@import '_partials/banner';
+@import '_partials/centered';
+@import '_partials/flag';
+@import '_partials/grid';
+@import '_partials/mailchimp';
+@import '_partials/media';
+@import '_partials/split';
+@import '_partials/stacked';
+@import '_partials/two_columns';
+
+/**
+ *  Base
+ *  - - - - - - - - - - - - - - - - */
+
+body {
+  color: $color-base;
+  font-size: $text-sm;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: $text-sm;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  word-break: normal;
+}
+
+p {
+  line-height: $line-sm;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+}
+
+hr {
+  background-color: $color-base;
+  border: none;
+  color: $color-base;
+  height: 1px;
+}
+
+a {
+  color: $color-base;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    outline: 0;
+    color: $color-base;
+    text-decoration: none;
+  }
+}

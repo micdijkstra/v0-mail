@@ -1,0 +1,1168 @@
+/*doc
+ ---
+ title: Overview
+ name: 0-variables-overview
+ category: Variables
+ ---
+
+Variables can be overridden by being set before including the `_variables` partial.
+*/
+
+/*doc
+---
+title: Screen Sizes
+name: 1-screen-sizes
+category: Variables
+---
+
+Set break points which are used in break point mixins, utilities, text and visibility helpers.
+
+| Variable  | Default
+| ---       | ---
+| `$mobile` | 600px
+| `$lap`    | 750px
+| `$desk`   | 980px
+| `$gutter` | 45px
+*/
+
+$mobile:                                 600px !default;
+$lap:                                    750px !default;
+$desk:                                   980px !default;
+$gutter:                                 45px !default;
+
+/*doc
+---
+title: Text Sizes
+name: text-sizes
+category: Variables
+---
+
+| Variable    | Default
+| ---         | ---
+| `$text`     | 9px
+| `$text-xxs` | 11px
+| `$text-xs`  | 13px
+| `$text-sm`  | 18px
+| `$text-md`  | 25px
+| `$text-lg`  | 40px
+| `$text-xl`  | 60px
+| `$text-xxl` | 100px
+*/
+
+$text:                                   9px !default;
+$text-xxs:                               11px !default;
+$text-xs:                                13px !default;
+$text-sm:                                18px !default;
+$text-md:                                25px !default;
+$text-lg:                                40px !default;
+$text-xl:                                60px !default;
+$text-xxl:                               100px !default;
+
+/*doc
+---
+title: Letter Spacing
+name: letter-spacing
+category: Variables
+---
+
+| Variable     | Default
+| ---          | ---
+| `$letter-sm` | 0.05em
+| `$letter-md` | 0.1em
+| `$letter-lg` | 0.3em
+*/
+
+$letter-sm:                              0.05em !default;
+$letter-md:                              0.1em !default;
+$letter-lg:                              0.3em !default;
+
+/*doc
+---
+title: Line Height
+name: line-height
+category: Variables
+---
+
+| Variable   | Default
+| ---        | ---
+| `$line-xs` | 1.0
+| `$line-sm` | 1.25
+| `$line-md` | 1.5
+| `$line-lg` | 1.75
+| `$line-xl` | 2.0
+*/
+
+$line-xs:                                1.0 !default;
+$line-sm:                                1.25 !default;
+$line-md:                                1.5 !default;
+$line-lg:                                1.75 !default;
+$line-xl:                                2.0 !default;
+
+/*doc
+---
+title: Spacing
+name: spacing
+category: Variables
+---
+
+| Variable    | Default
+| ---         | ---
+| `$space-xs` | 10px
+| `$space-sm` | 15px
+| `$space-md` | 30px
+| `$space-lg` | 60px
+| `$space-xl` | 100px
+*/
+
+$space-xs:                               10px !default;
+$space-sm:                               15px !default;
+$space-md:                               30px !default;
+$space-lg:                               60px !default;
+$space-xl:                               100px !default;
+
+
+
+/*doc
+ ---
+ title: Overview
+ name: 0-mixins-overview
+ category: Mixins
+ ---
+
+Mixins should be used when the output of the included CSS changes or you need to repeat the same group of declarations.
+
+*/
+
+/*doc
+---
+title: Media Queries
+name: 1-media-queries
+category: Mixins
+---
+
+**Width**
+  
+You should implement a mobile first approach so you use `from` over `to`.
+  
++ `@from($device-width)`
++ `@to($device-width)`
+  
+The following shorthand mixins have been created for your convenience.
+  
+| Mixin                | Description
+| ---                  | ---
+| `@include mobile {}` | To mobile screen size
+| `@include lap{}`     | From lap screen size
+| `@include desk {}`   | From desk screen size
+  
+The value for these break-points is set in [variables][screen-sizes].
+*/
+
+@mixin from($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content;
+  }
+}
+
+@mixin to($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include to($lap - 1px) {
+    @content;
+  }
+}
+
+@mixin lap {
+  @include from($lap) {
+    @content;
+  }
+}
+
+@mixin desk {
+  @include from($desk) {
+    @content;
+  }
+}
+
+/*doc
+---
+title: Background Image
+name: background-image
+category: Mixins
+---
+
+Cover background image.
+ 
+`@include background-image('image.png')`
+*/
+
+@mixin background-image($image) {
+  background-image: url($image) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+/*doc
+---
+title: Link
+name: link
+category: Mixins
+---
+
+Set color for link in all states.
+ 
+`@include a(black)`
+*/
+
+@mixin a($color) {
+  a {
+    color: $color !important;
+
+    &:hover,
+    &:visited,
+    &:focus,
+    &:active {
+      color: $color !important;
+    }
+  }
+}
+
+/*doc
+---
+title: Hyphenate
+name: hyphenate
+category: Mixins
+---
+
+Hyphenate text.
+ 
+`@include hyphenate`
+*/
+
+@mixin hyphenate {
+  -mds-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/*doc
+ ---
+ title: Overview
+ name: 0-utilities-overview
+ category: Utilities
+ ---
+
+Utilities are very specific and targeted, generally with a single property, sometimes with an !important suffix to ensure their property is modified.
+
+All utilities are prefixed by `u-` and can be optionally followed by one of the following break point abbreviations:
+
+*/
+
+/*doc
+ ---
+ title: Display
+ name: utilities-display
+ category: Utilities
+ ---
+
+Todo
+
+*/
+
+@mixin display-setup($namespace: "") {
+  .u#{$namespace}-table {
+    display: table;
+    width: 100%;
+  }
+  .u#{$namespace}-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .u#{$namespace}-block {
+    display: block;
+    width: 100%;
+  }
+  .u#{$namespace}-inline {
+    display: inline;
+  }
+  .u#{$namespace}-inline-block {
+    display: inline-block;
+  }
+  .u#{$namespace}-relative {
+    position: relative;
+  }
+  .u#{$namespace}-absolute {
+    position: absolute;
+  }
+  .u#{$namespace}-fixed {
+    position: fixed;
+  }
+  .u#{$namespace}-static {
+    position: static;
+  }
+  .u#{$namespace}-bottom {
+    bottom: 0;
+  }
+  .u#{$namespace}-left {
+    left: 0;
+  }
+  .u#{$namespace}-right {
+    right: 0;
+  }
+  .u#{$namespace}-top {
+    top: 0;
+  }
+  .u#{$namespace}-circle {
+    border-radius: 99999px;
+  }
+  .u#{$namespace}-half {
+    width: 50%;
+  }
+  .u#{$namespace}-full {
+    width: 100%;
+  }
+}
+
+/*doc
+ ---
+ title: Image
+ name: utilities-image
+ category: Utilities
+ ---
+
+Todo
+
+*/
+
+@mixin responsive-setup($namespace: "") {
+  .u#{$namespace}-responsive {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+
+    &.u#{$namespace}-responsive--full {
+      width: 100%;
+    }
+  }
+
+  .u#{$namespace}-center {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/*doc
+---
+title: Spacing
+name: space
+category: Utilities
+---
+
+Space utilities are configured for `padding` only and come with size suffixes for `n`, `xs`, `sm`, `md`, `lg`, `xl`.
+
+The value for these break-points is set in [variables][spacing].
+
+If verbosity is not your thing you can use the shorthand version (in brackets).
+
+Classes are constructed as: `u-{{type}}-{{direction}}-{{size}}`  
+e.g. `u-padding-all-lg`
+
+Shorthand classes are constructed as `u-{{type}}{{direction}}{{size}}`  
+e.g. `u-palg`
+
+**Type**
+
++ `padding-` or `p`
++ `margin-` or `m`
+ 
+**Direction**
+
++ `top-` or `t`
++ `bottom-` `b`
++ `vertical-` `v`
++ `left-` `l`
++ `right-` `r`
++ `horizontal-` `h`
++ `all-` `a`
+ 
+**Size**
+
++ `xs`
++ `sm`
++ `md`
++ `lg`
++ `xl`
+
+```html_example
+<div class="u-padding-all-md">
+  Content
+</div>
+```
+*/
+
+@mixin space-padding-setup($namespace: "") {
+  .u#{$namespace}-ptn,
+  .u#{$namespace}-padding-top-n,
+  .u#{$namespace}-pvn,
+  .u#{$namespace}-padding-vertical-n,
+  .u#{$namespace}-pan,
+  .u#{$namespace}-padding-all-n {
+    padding-top: 0 !important;
+  }
+  .u#{$namespace}-ptxs,
+  .u#{$namespace}-padding-top-xs,
+  .u#{$namespace}-pvxs,
+  .u#{$namespace}-padding-vertical-xs,
+  .u#{$namespace}-paxs,
+  .u#{$namespace}-padding-all-xs {
+    padding-top: $space-xs !important;
+  }
+  .u#{$namespace}-ptsm,
+  .u#{$namespace}-padding-top-sm,
+  .u#{$namespace}-pvsm,
+  .u#{$namespace}-padding-vertical-sm,
+  .u#{$namespace}-pasm,
+  .u#{$namespace}-padding-all-sm {
+    padding-top: $space-sm !important;
+  }
+  .u#{$namespace}-ptmd,
+  .u#{$namespace}-padding-top-md,
+  .u#{$namespace}-pvmd,
+  .u#{$namespace}-padding-vertical-md,
+  .u#{$namespace}-pamd,
+  .u#{$namespace}-padding-all-md {
+    padding-top: $space-md !important;
+  }
+  .u#{$namespace}-ptlg,
+  .u#{$namespace}-padding-top-lg,
+  .u#{$namespace}-pvlg,
+  .u#{$namespace}-padding-vertical-lg,
+  .u#{$namespace}-palg,
+  .u#{$namespace}-padding-all-lg {
+    padding-top: $space-lg !important;
+  }
+  .u#{$namespace}-ptxl,
+  .u#{$namespace}-padding-top-xl,
+  .u#{$namespace}-pvxl,
+  .u#{$namespace}-padding-vertical-xl,
+  .u#{$namespace}-paxl,
+  .u#{$namespace}-padding-all-xl {
+    padding-top: $space-xl !important;
+  }
+  .u#{$namespace}-pbn,
+  .u#{$namespace}-padding-bottom-n,
+  .u#{$namespace}-pvn,
+  .u#{$namespace}-padding-vertical-n,
+  .u#{$namespace}-pan,
+  .u#{$namespace}-padding-all-n {
+    padding-bottom: 0 !important;
+  }
+  .u#{$namespace}-pbxs,
+  .u#{$namespace}-padding-bottom-xs,
+  .u#{$namespace}-pvxs,
+  .u#{$namespace}-padding-vertical-xs,
+  .u#{$namespace}-paxs,
+  .u#{$namespace}-padding-all-xs {
+    padding-bottom: $space-xs !important;
+  }
+  .u#{$namespace}-pbsm,
+  .u#{$namespace}-padding-bottom-sm,
+  .u#{$namespace}-pvsm,
+  .u#{$namespace}-padding-vertical-sm,
+  .u#{$namespace}-pasm,
+  .u#{$namespace}-padding-all-sm {
+    padding-bottom: $space-sm !important;
+  }
+  .u#{$namespace}-pbmd,
+  .u#{$namespace}-padding-bottom-md,
+  .u#{$namespace}-pvmd,
+  .u#{$namespace}-padding-vertical-md,
+  .u#{$namespace}-pamd,
+  .u#{$namespace}-padding-all-md {
+    padding-bottom: $space-md !important;
+  }
+  .u#{$namespace}-pblg,
+  .u#{$namespace}-padding-bottom-lg,
+  .u#{$namespace}-pvlg,
+  .u#{$namespace}-padding-vertical-lg,
+  .u#{$namespace}-palg,
+  .u#{$namespace}-padding-all-lg {
+    padding-bottom: $space-lg !important;
+  }
+  .u#{$namespace}-pbxl,
+  .u#{$namespace}-padding-bottom-xl,
+  .u#{$namespace}-pvxl,
+  .u#{$namespace}-padding-vertical-xl,
+  .u#{$namespace}-paxl,
+  .u#{$namespace}-padding-all-xl {
+    padding-bottom: $space-xl !important;
+  }
+  .u#{$namespace}-pln,
+  .u#{$namespace}-padding-left-n,
+  .u#{$namespace}-phn,
+  .u#{$namespace}-padding-horizontal-n,
+  .u#{$namespace}-pan,
+  .u#{$namespace}-padding-all-n {
+    padding-left: 0 !important;
+  }
+  .u#{$namespace}-plxs,
+  .u#{$namespace}-padding-left-xs,
+  .u#{$namespace}-phxs,
+  .u#{$namespace}-padding-horizontal-xs,
+  .u#{$namespace}-paxs,
+  .u#{$namespace}-padding-all-xs {
+    padding-left: $space-xs !important;
+  }
+  .u#{$namespace}-plsm,
+  .u#{$namespace}-padding-left-sm,
+  .u#{$namespace}-phsm,
+  .u#{$namespace}-padding-horizontal-sm,
+  .u#{$namespace}-pasm,
+  .u#{$namespace}-padding-all-sm {
+    padding-left: $space-sm !important;
+  }
+  .u#{$namespace}-plmd,
+  .u#{$namespace}-padding-left-md,
+  .u#{$namespace}-phmd,
+  .u#{$namespace}-padding-horizontal-md,
+  .u#{$namespace}-pamd,
+  .u#{$namespace}-padding-all-md {
+    padding-left: $space-md !important;
+  }
+  .u#{$namespace}-pllg,
+  .u#{$namespace}-padding-left-lg,
+  .u#{$namespace}-phlg,
+  .u#{$namespace}-padding-horizontal-lg,
+  .u#{$namespace}-palg,
+  .u#{$namespace}-padding-all-lg {
+    padding-left: $space-lg !important;
+  }
+  .u#{$namespace}-plxl,
+  .u#{$namespace}-padding-left-xl,
+  .u#{$namespace}-phxl,
+  .u#{$namespace}-padding-horizontal-xl,
+  .u#{$namespace}-paxl,
+  .u#{$namespace}-padding-all-xl {
+    padding-left: $space-xl !important;
+  }
+  .u#{$namespace}-prn,
+  .u#{$namespace}-padding-right-n,
+  .u#{$namespace}-phn,
+  .u#{$namespace}-padding-horizontal-n,
+  .u#{$namespace}-pan,
+  .u#{$namespace}-padding-all-n {
+    padding-right: 0 !important;
+  }
+  .u#{$namespace}-prxs,
+  .u#{$namespace}-padding-right-xs,
+  .u#{$namespace}-phxs,
+  .u#{$namespace}-padding-horizontal-xs,
+  .u#{$namespace}-paxs,
+  .u#{$namespace}-padding-all-xs {
+    padding-right: $space-xs !important;
+  }
+  .u#{$namespace}-prsm,
+  .u#{$namespace}-padding-right-sm,
+  .u#{$namespace}-phsm,
+  .u#{$namespace}-padding-horizontal-sm,
+  .u#{$namespace}-pasm,
+  .u#{$namespace}-padding-all-sm {
+    padding-right: $space-sm !important;
+  }
+  .u#{$namespace}-prmd,
+  .u#{$namespace}-padding-right-md,
+  .u#{$namespace}-phmd,
+  .u#{$namespace}-padding-horizontal-md,
+  .u#{$namespace}-pamd,
+  .u#{$namespace}-padding-all-md {
+    padding-right: $space-md !important;
+  }
+  .u#{$namespace}-prlg,
+  .u#{$namespace}-padding-right-lg,
+  .u#{$namespace}-phlg,
+  .u#{$namespace}-padding-horizontal-lg,
+  .u#{$namespace}-palg,
+  .u#{$namespace}-padding-all-lg {
+    padding-right: $space-lg !important;
+  }
+  .u#{$namespace}-prxl,
+  .u#{$namespace}-padding-right-xl,
+  .u#{$namespace}-phxl,
+  .u#{$namespace}-padding-horizontal-xl,
+  .u#{$namespace}-paxl,
+  .u#{$namespace}-padding-all-xl {
+    padding-right: $space-xl !important;
+  }
+}
+
+/*doc
+ ---
+ title: Visibility
+ name: visibility
+ category: Utilities
+ ---
+
+Todo
+
+*/
+
+.u-hidden-lap,
+.u-visible-mobile {
+  display: block;
+}
+
+.u-visible-lap,
+.u-hidden-mobile {
+  display: block;
+  max-height: 0;
+  width:0;
+  mso-hide:all;
+  overflow:hidden;
+
+  * {
+    mso-hide:all;
+  }
+}
+
+@include lap {
+  table[class="body"] .u-hidden-lap,
+  table[class="body"] .u-visible-mobile {
+    display: none !important;
+  }
+
+  table[class="body"] .u-visible-lap,
+  table[class="body"] .u-hidden-mobile {
+    display : block !important;
+    max-height: 100000px !important;
+    width : auto !important;
+    overflow : visible !important;
+  }
+}
+
+/*doc
+---
+title: Size
+name: 0-t-sizes
+category: Type
+---
+
+| Class       | Size
+| ---         | ---
+| `t-default` | [$text-default][text-sizes]
+| `t-xxs`     | [$text-xxs][text-sizes]
+| `t-xs`      | [$text-xs][text-sizes]
+| `t-sm`      | [$text-sm][text-sizes]
+| `t-md`      | [$text-md][text-sizes]
+| `t-lg`      | [$text-lg][text-sizes]
+| `t-xl`      | [$text-xl][text-sizes]
+| `t-xxl`     | [$text-xxl][text-sizes]
+
+```html_example
+<div class="t-xxs">Extra Extra Small</div>
+```
+
+```html_example
+<div class="t-xs">Extra Small</div>
+```
+
+```html_example
+<div class="t-sm">Small</div>
+```
+
+```html_example
+<div class="t-md">Medium</div>
+```
+
+```html_example
+<div class="t-lg">Large</div>
+```
+
+```html_example
+<div class="t-xl">Extra Large</div>
+```
+
+```html_example
+<div class="t-xxl">Extra Extra Large</div>
+```
+*/
+
+
+@mixin text-setup($namespace: "") {
+  .t#{$namespace}-xxs {
+    font-size: $text-xxs;
+  }
+  .t#{$namespace}-xs {
+    font-size: $text-xs;
+  }
+  .t#{$namespace}-sm {
+    font-size: $text-sm;
+  }
+  .t#{$namespace}-md {
+    font-size: $text-md;
+  }
+  .t#{$namespace}-lg {
+    font-size: $text-lg;
+  }
+  .t#{$namespace}-xl {
+    font-size: $text-xl;
+  }
+  .t#{$namespace}-xxl {
+    font-size: $text-xxl;
+  }
+  .t#{$namespace}-lssm,
+  .t#{$namespace}-letter-sm {
+    letter-spacing: $letter-sm;
+  }
+  .t#{$namespace}-lsmd,
+  .t#{$namespace}-letter-md {
+    letter-spacing: $letter-md;
+  }
+  .t#{$namespace}-lslg,
+  .t#{$namespace}-letter-lg {
+    letter-spacing: $letter-lg;
+  }
+  .t#{$namespace}-c,
+  .t#{$namespace}-center {
+    text-align: center;
+  }
+  .t#{$namespace}-al,
+  .t#{$namespace}-left {
+    text-align: left;
+  }
+  .t#{$namespace}-ar,
+  .t#{$namespace}-right {
+    text-align: right;
+  }
+  .t#{$namespace}-u,
+  .t#{$namespace}-uppercase {
+    text-transform: uppercase;
+  }
+  .t#{$namespace}-l,
+  .t#{$namespace}-lowercase {
+    text-transform: lowercase;
+  }
+  .t#{$namespace}-c,
+  .t#{$namespace}-capitalize {
+    text-transform: capitalize;
+  }
+  .t#{$namespace}-u,
+  .t#{$namespace}-underline {
+    text-decoration: underline;
+  }
+  .t#{$namespace}-n,
+  .t#{$namespace}-none {
+    text-decoration: none;
+  }
+  .t#{$namespace}-lxs,
+  .t#{$namespace}-line-xs {
+    line-height: $line-xs;
+  }
+  .t#{$namespace}-lsm,
+  .t#{$namespace}-line-sm {
+    line-height: $line-sm;
+  }
+  .t#{$namespace}-lmd,
+  .t#{$namespace}-line-md {
+    line-height: $line-md;
+  }
+  .t#{$namespace}-llg,
+  .t#{$namespace}-line-lg {
+    line-height: $line-lg;
+  }
+  .t#{$namespace}-lxl,
+  .t#{$namespace}-line-xl {
+    line-height: $line-xl;
+  }
+  .t#{$namespace}-h,
+  .t#{$namespace}-hyphenate {
+    -mds-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+@include display-setup("");
+@include responsive-setup("");
+@include space-padding-setup("");
+@include text-setup("");
+
+
+/*doc
+ ---
+ title: Overview
+ name: 0-layout-overview
+ category: Layout
+ ---
+
+ The layout classes are derived from a modified version of Ink with padding removed and a wide break point added. It has also been configured to work with the screen sizes set in variables.
+
+*/
+
+/* Client-specific Styles and Reset */
+
+#outlook a {
+  padding:0;
+}
+
+body{
+  width:100% !important;
+  min-width: 100%;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  margin:0;
+  padding:0;
+}
+
+  /* .ExternalClass applies to Outlook.com (the artist formerly known as Hotmail)  */
+
+.ExternalClass {
+  width:100%;
+}
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+
+#backgroundTable {
+  margin:0;
+  padding:0;
+  width:100% !important;
+  line-height: 100% !important;
+}
+
+img {
+  outline:none;
+  text-decoration:none;
+  -ms-interpolation-mode: bicubic;
+  width: auto;
+}
+
+center {
+  width: 100%;
+  min-width: 580px;
+}
+
+a img {
+  border: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  border-collapse: collapse !important;
+  width: 100%;
+}
+
+table, tr, td {
+  padding: 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+/*doc
+ ---
+ title: Alignment
+ name: alignment
+ category: Layout
+ ---
+
+Todo
+
+*/
+
+table.center, td.center {
+  text-align: center;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/*doc
+ ---
+ title: Grid
+ name: grid
+ category: Layout
+ ---
+
+Todo
+
+*/
+
+
+table.body {
+  height: 100%;
+  width: 100%;
+}
+
+table.container {
+  width: $mobile  - $gutter * 2;
+  margin: 0 auto;
+  text-align: inherit;
+
+  &.full {
+    width: 100% !important;
+  }
+
+
+  &.wide {
+    width: 100%;
+
+    @include desk {
+      width: $desk - $gutter * 2 !important;
+    }
+  }
+}
+
+table.row {
+  padding: 0px;
+  width: 100%;
+  position: relative;
+}
+
+table.container table.row {
+  display: block;
+}
+
+td.wrapper {
+  position: relative;
+}
+
+table.columns,
+table.column {
+  margin: 0 auto;
+}
+
+td.sub-column, td.sub-columns {
+  min-width: 0px;
+}
+
+@mixin grid-setup($size, $important) {
+  table.one { width: $size/12 * 1 $important}
+  table.two { width: $size/12 * 2 $important}
+  table.three { width: $size/12 * 3 $important}
+  table.four { width: $size/12 * 4 $important}
+  table.five { width: $size/12 * 5 $important}
+  table.six { width: $size/12 * 6 $important}
+  table.seven { width: $size/12 * 7 $important}
+  table.eight { width: $size/12 * 8 $important}
+  table.nine { width: $size/12 * 9 $important}
+  table.ten { width: $size/12 * 10 $important}
+  table.eleven { width: $size/12 * 11 $important}
+  table.twelve { width: $size/12 * 12 $important}
+
+  table.one center { min-width: $size/12 * 1 $important }
+  table.two center { min-width: $size/12 * 2 $important }
+  table.three center { min-width: $size/12 * 3 $important }
+  table.four center { min-width: $size/12 * 4 $important }
+  table.five center { min-width: $size/12 * 5 $important }
+  table.six center { min-width: $size/12 * 6 $important }
+  table.seven center { min-width: $size/12 * 7 $important }
+  table.eight center { min-width: $size/12 * 8 $important }
+  table.nine center { min-width: $size/12 * 9 $important }
+  table.ten center { min-width: $size/12 * 10 $important }
+  table.eleven center { min-width: $size/12 * 11 $important }
+  table.twelve center { min-width: $size/12 * 12 $important }
+
+  .container {
+    width: $size $important;
+  }
+
+  .block-grid {
+    max-width: $size;
+  }
+
+  .two-up td {
+    width: $size/2 $important
+  }
+
+  .three-up td {
+    width: $size/3 $important
+  }
+
+  .four-up td {
+    width: $size/4 $important
+  }
+
+  .five-up td {
+    width: $size/5 $important
+  }
+
+  .six-up td {
+    width: $size/6 $important
+  }
+
+  .seven-up td {
+    width: $size/7 $important
+  }
+
+  .eight-up td {
+    width: $size/8 $important
+  }
+}
+
+@include grid-setup($mobile - $gutter, null);
+
+.gutter {
+  min-width: $gutter;
+  max-width: $gutter;
+  width: $gutter;
+
+  &:first-child {
+
+    @include mobile {
+      min-width: 0 !important;
+      max-width: 0 !important;
+      width: 0 !important;
+    }
+  }
+}
+
+@include from($lap) {
+  @include grid-setup($lap - ($gutter * 2), !important);
+}
+
+.body .columns td.one,
+.body .column td.one { width: 8.333333%; }
+.body .columns td.two,
+.body .column td.two { width: 16.666666%; }
+.body .columns td.three,
+.body .column td.three { width: 25%; }
+.body .columns td.four,
+.body .column td.four { width: 33.333333%; }
+.body .columns td.five,
+.body .column td.five { width: 41.666666%; }
+.body .columns td.six,
+.body .column td.six { width: 50%; }
+.body .columns td.seven,
+.body .column td.seven { width: 58.333333%; }
+.body .columns td.eight,
+.body .column td.eight { width: 66.666666%; }
+.body .columns td.nine,
+.body .column td.nine { width: 75%; }
+.body .columns td.ten,
+.body .column td.ten { width: 83.333333%; }
+.body .columns td.eleven,
+.body .column td.eleven { width: 91.666666%; }
+.body .columns td.twelve,
+.body .column td.twelve { width: 100%; }
+
+td.expander {
+  visibility: hidden;
+  width: 0px;
+  padding: 0 !important;
+}
+
+@include to($mobile + $gutter * 2) {
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+
+  table[class="body"] .container {
+    width: 100% !important;
+
+    &.full {
+      width: 100% !important;
+    }
+  }
+
+  table[class="body"] .row {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper {
+    display: block !important;
+    padding-right: 0 !important;
+  }
+
+  table[class="body"] .columns,
+  table[class="body"] .column {
+    table-layout: fixed !important;
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper.first .columns,
+  table[class="body"] .wrapper.first .column {
+    display: table !important;
+  }
+
+  table[class="body"] table.columns td,
+  table[class="body"] table.column td {
+    width: 100% !important;
+  }
+
+  table[class="body"] .columns td.one,
+  table[class="body"] .column td.one { width: 8.333333% !important; }
+  table[class="body"] .columns td.two,
+  table[class="body"] .column td.two { width: 16.666666% !important; }
+  table[class="body"] .columns td.three,
+  table[class="body"] .column td.three { width: 25% !important; }
+  table[class="body"] .columns td.four,
+  table[class="body"] .column td.four { width: 33.333333% !important; }
+  table[class="body"] .columns td.five,
+  table[class="body"] .column td.five { width: 41.666666% !important; }
+  table[class="body"] .columns td.six,
+  table[class="body"] .column td.six { width: 50% !important; }
+  table[class="body"] .columns td.seven,
+  table[class="body"] .column td.seven { width: 58.333333% !important; }
+  table[class="body"] .columns td.eight,
+  table[class="body"] .column td.eight { width: 66.666666% !important; }
+  table[class="body"] .columns td.nine,
+  table[class="body"] .column td.nine { width: 75% !important; }
+  table[class="body"] .columns td.ten,
+  table[class="body"] .column td.ten { width: 83.333333% !important; }
+  table[class="body"] .columns td.eleven,
+  table[class="body"] .column td.eleven { width: 91.666666% !important; }
+  table[class="body"] .columns td.twelve,
+  table[class="body"] .column td.twelve { width: 100% !important; }
+
+  table[class="body"] td.offset-by-one,
+  table[class="body"] td.offset-by-two,
+  table[class="body"] td.offset-by-three,
+  table[class="body"] td.offset-by-four,
+  table[class="body"] td.offset-by-five,
+  table[class="body"] td.offset-by-six,
+  table[class="body"] td.offset-by-seven,
+  table[class="body"] td.offset-by-eight,
+  table[class="body"] td.offset-by-nine,
+  table[class="body"] td.offset-by-ten,
+  table[class="body"] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
+}
+
+/* Outlook First */
+
+body.outlook p {
+  display: inline !important;
+}

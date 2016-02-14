@@ -1,0 +1,60 @@
+/*doc
+ ---
+ title: Mailchimp
+ name: mailchimp
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center class="mailchimp u-padding-top-sm u-padding-bottom-md">
+        <table class="container">
+          <tr>
+            <td>
+              <table class="row">
+                <tr>
+                  <td class="wrapper last">
+
+                    <table class="twelve columns">
+                      <tr>
+                        <td class="t-center">
+                          <p class="u-text-xs t-center">
+                            Copyright &copy; 2015
+                          </p>
+
+                          <p class="u-text-xs t-center">
+                            Collaborative Fund.
+                          </p>
+
+                          <p class="u-text-xs t-center">
+                            All rights reserved.
+                          </p>
+
+                          <p class="u-text-xs t-center u-ptmd">
+                            <a href="*|UNSUB|*">Unsubscribe?</a>
+                          </p>
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+
+.mailchimp {
+  background: black;
+  color: white;
+  @include a(white);
+}

@@ -1,0 +1,78 @@
+/*doc
+ ---
+ title: Media
+ name: media
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container full">
+          <tr>
+            <td>
+              <div class="media">
+                <div class="media-image">
+                  <a href="#" class="u-hidden-lap" target="_blank">
+                    <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+                  </a>
+
+                  <a href="#" class="u-hidden-mobile" target="_blank">
+                    <img src="http://placehold.it/125x125&text=Dekstop%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+                  </a>
+                </div>
+
+                <div class="media-body">
+                  <table>
+                    <tr>
+                      <td>
+                        <div>A witty title.</div>
+                        <div>Some text with a <a href="#" target="_blank">Link</a>, and another <a href="" target="_blank">Link</a>.</div>
+                        <a href="#" target="_blank">Link</a>
+                      </td>
+
+                      <td class="gutter u-tam">
+                        {% include 'social_links' %}
+                      </td>
+
+                      <td class="expander"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+
+.media {
+  @include lap {
+    display: table !important;
+    width: 100% !important;
+  }
+}
+
+.media-image,
+.media-body {
+  display: block;
+  width: 100%;
+
+  @include lap {
+    display: table-cell !important;
+    width: 50% !important;
+  }
+}
+
+.media-body {
+  vertical-align: middle;
+}
+

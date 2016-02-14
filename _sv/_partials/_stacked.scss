@@ -1,0 +1,39 @@
+/*doc
+ ---
+ title: Stacked
+ name: stacked
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container wide">
+          <tr>
+            <td>
+              <div class="media">
+                <div class="media-image">
+                  <div class="t-center u-padding-vertical-lg">
+                    When you have content on the top …
+                  </div>
+                </div>
+
+                <div class="media-body">
+                  <div class="t-center u-padding-vertical-lg">
+                    You might want it on the side on desk.
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/

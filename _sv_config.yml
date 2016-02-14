@@ -7,3 +7,5 @@ destination_stylesheet: _sv_custom.css
 destination_javascript: _sv_custom.js
 layout: _layout.liquid
 includes: _includes
+compile_sprite: false
+compile_js: false
