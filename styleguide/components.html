@@ -6,112 +6,493 @@
     <title>Components &ndash; Styleguide</title>
 
     <!-- Styleguide CSS -->
-    <link rel="stylesheet" href="styles/hgt-syntax.css">
-    <link rel="stylesheet" href="styles/hgt.css">
+    
+    
 
     <!-- Source CSS -->
     
       
-        <link rel="stylesheet" href="../_sv_custom.css">
+        
       
     
+
+
+
+<style type="text/css">
+.hgt-content .styleguide a:hover {
+text-decoration: underline;
+}
+.hgt-footer a:hover {
+text-decoration: underline;
+}
+.hgt-columns:after {
+display: table; clear: both; content: "";
+}
+.hgt-columns:before {
+display: table; content: "";
+}
+.hgt-pagehead-nav-item:hover {
+color: #333; text-decoration: none;
+}
+.hgt-menu-item:hover {
+text-decoration: none; background-color: #F9F9F9;
+}
+.hgt-menu-item.selected:before {
+position: absolute; top: 0; left: 0; bottom: 0; width: 2px; content: ""; background-color: #D26911;
+}
+.hgt-menu-item:first-child:before {
+border-top-left-radius: 2px;
+}
+.hgt-content code.styleguide:before {
+letter-spacing: -0.2em; content: " ";
+}
+.hgt-content code.styleguide:after {
+letter-spacing: -0.2em; content: " ";
+}
+.hgt-content tt.styleguide:before {
+letter-spacing: -0.2em; content: " ";
+}
+.hgt-content tt.styleguide:after {
+letter-spacing: -0.2em; content: " ";
+}
+.hgt-content .codeExample:before {
+font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif; color: #222; border: 1px solid #EEE; border-radius: 4px; border-bottom-left-radius: 0; border-top-right-radius: 0; position: relative; padding: 2px; display: block;
+}
+.hgt-content .jsExample:before {
+font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif; color: #222; border: 1px solid #EEE; border-radius: 4px; border-bottom-left-radius: 0; border-top-right-radius: 0; position: relative; padding: 2px; display: block;
+}
+.hgt-footer:after {
+display: table; clear: both; content: "";
+}
+.hgt-footer:before {
+display: table; content: "";
+}
+body {
+width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;
+}
+.ExternalClass {
+width: 100%;
+}
+.ExternalClass {
+line-height: 100%;
+}
+#backgroundTable {
+margin: 0; padding: 0; width: 100% !important; line-height: 100% !important;
+}
+img {
+outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto;
+}
+body.outlook p {
+display: inline !important;
+}
+.mailchimp a:hover {
+color: white !important;
+}
+.mailchimp a:visited {
+color: white !important;
+}
+.mailchimp a:focus {
+color: white !important;
+}
+.mailchimp a:active {
+color: white !important;
+}
+body {
+color: #000; font-size: 18px;
+}
+a:hover {
+outline: 0; color: #000; text-decoration: none;
+}
+a:active {
+outline: 0; color: #000; text-decoration: none;
+}
+a:focus {
+outline: 0; color: #000; text-decoration: none;
+}
+a:visited {
+outline: 0; color: #000; text-decoration: none;
+}
+@media screen and (min-width:750px) {
+  table[class="body"] .u-hidden-lap {
+    display: none !important;
+  }
+  table[class="body"] .u-visible-mobile {
+    display: none !important;
+  }
+  table[class="body"] .u-visible-lap {
+    display: block !important; max-height: 100000px !important; width: auto !important; overflow: visible !important;
+  }
+  table[class="body"] .u-hidden-mobile {
+    display: block !important; max-height: 100000px !important; width: auto !important; overflow: visible !important;
+  }
+  table.one {
+    width: 55px !important;
+  }
+  table.two {
+    width: 110px !important;
+  }
+  table.three {
+    width: 165px !important;
+  }
+  table.four {
+    width: 220px !important;
+  }
+  table.five {
+    width: 275px !important;
+  }
+  table.six {
+    width: 330px !important;
+  }
+  table.seven {
+    width: 385px !important;
+  }
+  table.eight {
+    width: 440px !important;
+  }
+  table.nine {
+    width: 495px !important;
+  }
+  table.ten {
+    width: 550px !important;
+  }
+  table.eleven {
+    width: 605px !important;
+  }
+  table.twelve {
+    width: 660px !important;
+  }
+  table.one center {
+    min-width: 55px !important;
+  }
+  table.two center {
+    min-width: 110px !important;
+  }
+  table.three center {
+    min-width: 165px !important;
+  }
+  table.four center {
+    min-width: 220px !important;
+  }
+  table.five center {
+    min-width: 275px !important;
+  }
+  table.six center {
+    min-width: 330px !important;
+  }
+  table.seven center {
+    min-width: 385px !important;
+  }
+  table.eight center {
+    min-width: 440px !important;
+  }
+  table.nine center {
+    min-width: 495px !important;
+  }
+  table.ten center {
+    min-width: 550px !important;
+  }
+  table.eleven center {
+    min-width: 605px !important;
+  }
+  table.twelve center {
+    min-width: 660px !important;
+  }
+  .container {
+    width: 660px !important;
+  }
+  .block-grid {
+    max-width: 660px;
+  }
+  .two-up td {
+    width: 330px !important;
+  }
+  .three-up td {
+    width: 220px !important;
+  }
+  .four-up td {
+    width: 165px !important;
+  }
+  .five-up td {
+    width: 132px !important;
+  }
+  .six-up td {
+    width: 110px !important;
+  }
+  .seven-up td {
+    width: 94.28571px !important;
+  }
+  .eight-up td {
+    width: 82.5px !important;
+  }
+  .flag-image {
+    max-width: 270px !important; min-width: 270px !important;
+  }
+  .media {
+    display: table !important; width: 100% !important;
+  }
+  .media-image {
+    display: table-cell !important; width: 50% !important;
+  }
+  .media-body {
+    display: table-cell !important; width: 50% !important;
+  }
+}
+@media screen and (min-width:980px) {
+  table.container.wide {
+    width: 890px !important;
+  }
+}
+@media screen and (max-width:748px) {
+  .gutter:first-child {
+    min-width: 0 !important; max-width: 0 !important; width: 0 !important;
+  }
+  .flag-image {
+    max-width: 170px !important; min-width: 170px !important;
+  }
+  .flag-body:first-child {
+    max-width: 0 !important; min-width: 0 !important; width: auto !important;
+  }
+  .flag-body:last-child {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width:689px) {
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+  table[class="body"] .container {
+    width: 100% !important;
+  }
+  table[class="body"] .container.full {
+    width: 100% !important;
+  }
+  table[class="body"] .row {
+    width: 100% !important; display: block !important;
+  }
+  table[class="body"] .wrapper {
+    display: block !important; padding-right: 0 !important;
+  }
+  table[class="body"] .columns {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0 !important; padding-left: 0 !important; display: block !important;
+  }
+  table[class="body"] .column {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0 !important; padding-left: 0 !important; display: block !important;
+  }
+  table[class="body"] .wrapper.first .columns {
+    display: table !important;
+  }
+  table[class="body"] .wrapper.first .column {
+    display: table !important;
+  }
+  table[class="body"] table.columns td {
+    width: 100% !important;
+  }
+  table[class="body"] table.column td {
+    width: 100% !important;
+  }
+  table[class="body"] .columns td.one {
+    width: 8.333333% !important;
+  }
+  table[class="body"] .column td.one {
+    width: 8.333333% !important;
+  }
+  table[class="body"] .columns td.two {
+    width: 16.666666% !important;
+  }
+  table[class="body"] .column td.two {
+    width: 16.666666% !important;
+  }
+  table[class="body"] .columns td.three {
+    width: 25% !important;
+  }
+  table[class="body"] .column td.three {
+    width: 25% !important;
+  }
+  table[class="body"] .columns td.four {
+    width: 33.333333% !important;
+  }
+  table[class="body"] .column td.four {
+    width: 33.333333% !important;
+  }
+  table[class="body"] .columns td.five {
+    width: 41.666666% !important;
+  }
+  table[class="body"] .column td.five {
+    width: 41.666666% !important;
+  }
+  table[class="body"] .columns td.six {
+    width: 50% !important;
+  }
+  table[class="body"] .column td.six {
+    width: 50% !important;
+  }
+  table[class="body"] .columns td.seven {
+    width: 58.333333% !important;
+  }
+  table[class="body"] .column td.seven {
+    width: 58.333333% !important;
+  }
+  table[class="body"] .columns td.eight {
+    width: 66.666666% !important;
+  }
+  table[class="body"] .column td.eight {
+    width: 66.666666% !important;
+  }
+  table[class="body"] .columns td.nine {
+    width: 75% !important;
+  }
+  table[class="body"] .column td.nine {
+    width: 75% !important;
+  }
+  table[class="body"] .columns td.ten {
+    width: 83.333333% !important;
+  }
+  table[class="body"] .column td.ten {
+    width: 83.333333% !important;
+  }
+  table[class="body"] .columns td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class="body"] .column td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class="body"] .columns td.twelve {
+    width: 100% !important;
+  }
+  table[class="body"] .column td.twelve {
+    width: 100% !important;
+  }
+  table[class="body"] td.offset-by-one {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-two {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-three {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-four {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-five {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-six {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-seven {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-eight {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-nine {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-ten {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
+}
+</style>
 </head>
 
-  <body class="hgt-body">
-    <div class="hgt-pagehead">
-      <div class="hgt-container">
-        <nav class="hgt-pagehead-nav" role="navigation">
-          <a href="index.html"
-             class="hgt-pagehead-nav-item ">
+  <body class="hgt-body" style="width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #000; font-size: 18px; background: #fff; margin: 0; padding: 0;">
+    <div class="hgt-pagehead" style="font-size: 13px; line-height: 1.4; font-family: Helvetica,arial,freesans,clean,sans-serif; color: #333; box-sizing: border-box; position: relative; margin-bottom: 20px; padding-top: 20px; padding-bottom: 20px; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid;">
+      <div class="hgt-container" style="box-sizing: border-box; width: 980px; margin-right: auto; margin-left: auto;">
+        <nav class="hgt-pagehead-nav" role="navigation" style="box-sizing: border-box; display: block; float: right; margin-bottom: -20px;">
+          <a href="index.html" class="hgt-pagehead-nav-item " style="color: #4183C4; text-decoration: none; box-sizing: border-box; float: left; margin-left: 20px; font-size: 14px; padding: 6px 10px 21px;">
             Home
           </a>
 
           
-          <a href="components.html"
-             class="hgt-pagehead-nav-item selected">
+          <a href="components.html" class="hgt-pagehead-nav-item selected" style="color: #333; text-decoration: none; box-sizing: border-box; float: left; margin-left: 20px; font-size: 14px; border-bottom-color: #D26911; border-bottom-width: 2px; border-bottom-style: solid; padding: 6px 10px 21px;">
             Components
           </a>
           
-          <a href="libraries.html"
-             class="hgt-pagehead-nav-item ">
+          <a href="libraries.html" class="hgt-pagehead-nav-item " style="color: #4183C4; text-decoration: none; box-sizing: border-box; float: left; margin-left: 20px; font-size: 14px; padding: 6px 10px 21px;">
             Libraries
           </a>
           
-          <a href="index.html"
-             class="hgt-pagehead-nav-item ">
+          <a href="index.html" class="hgt-pagehead-nav-item " style="color: #4183C4; text-decoration: none; box-sizing: border-box; float: left; margin-left: 20px; font-size: 14px; padding: 6px 10px 21px;">
             
           </a>
           
         </nav>
 
-        <h1 class="hgt-pagehead-title">Styleguide</h1>
+        <h1 class="hgt-pagehead-title" style="box-sizing: border-box; font-size: 20px; font-weight: normal; line-height: 28px; letter-spacing: 0; word-break: normal; margin: 0; padding: 0;">Styleguide</h1>
       </div>
     </div>
 
-    <div class="hgt-styleguide hgt-container">
-      <div class="hgt-columns">
+    <div class="hgt-styleguide hgt-container" style="box-sizing: border-box; width: 980px; margin-right: auto; margin-left: auto;">
+      <div class="hgt-columns" style="box-sizing: border-box; margin-right: -10px; margin-left: -10px;">
         
-          <div class="hgt-column one-fourth">
-            <nav class="hgt-menu">
+          <div class="hgt-column one-fourth" style="box-sizing: border-box; display: block; float: left; width: 25%; padding-right: 10px; padding-left: 10px;">
+            <nav class="hgt-menu" style="font-size: 13px; line-height: 1.4; font-family: Helvetica,arial,freesans,clean,sans-serif; color: #333; display: block; margin-bottom: 15px; border-radius: 3px; background: #FFF; border: 1px solid #d8d8d8; list-style: none outside none;">
               
                 
-                  <a href="#banner" class="hgt-menu-item">Banner</a>
-                
-              
-                
-                  <a href="#centered" class="hgt-menu-item">Centered</a>
+                  <a href="#banner" class="hgt-menu-item" style="position: relative; display: block; color: #4078C0; text-shadow: 0 1px 0 #FFF; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; text-decoration: none; padding: 8px 10px;">Banner</a>
                 
               
                 
-                  <a href="#flag" class="hgt-menu-item">Flag</a>
+                  <a href="#centered" class="hgt-menu-item" style="position: relative; display: block; color: #4078C0; text-shadow: 0 1px 0 #FFF; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; text-decoration: none; padding: 8px 10px;">Centered</a>
                 
               
                 
-                  <a href="#grid" class="hgt-menu-item">Grid</a>
+                  <a href="#flag" class="hgt-menu-item" style="position: relative; display: block; color: #4078C0; text-shadow: 0 1px 0 #FFF; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; text-decoration: none; padding: 8px 10px;">Flag</a>
                 
               
                 
-                  <a href="#mailchimp" class="hgt-menu-item">Mailchimp</a>
+                  <a href="#grid" class="hgt-menu-item" style="position: relative; display: block; color: #4078C0; text-shadow: 0 1px 0 #FFF; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; text-decoration: none; padding: 8px 10px;">Grid</a>
                 
               
                 
-                  <a href="#media" class="hgt-menu-item">Media</a>
+                  <a href="#mailchimp" class="hgt-menu-item" style="position: relative; display: block; color: #4078C0; text-shadow: 0 1px 0 #FFF; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; text-decoration: none; padding: 8px 10px;">Mailchimp</a>
                 
               
                 
-                  <a href="#split" class="hgt-menu-item">Split</a>
+                  <a href="#media" class="hgt-menu-item" style="position: relative; display: block; color: #4078C0; text-shadow: 0 1px 0 #FFF; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; text-decoration: none; padding: 8px 10px;">Media</a>
                 
               
                 
-                  <a href="#two-columns" class="hgt-menu-item">Two Columns</a>
+                  <a href="#split" class="hgt-menu-item" style="position: relative; display: block; color: #4078C0; text-shadow: 0 1px 0 #FFF; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; text-decoration: none; padding: 8px 10px;">Split</a>
+                
+              
+                
+                  <a href="#two-columns" class="hgt-menu-item" style="position: relative; display: block; color: #4078C0; text-shadow: 0 1px 0 #FFF; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; text-decoration: none; padding: 8px 10px;">Two Columns</a>
                 
               
             </nav>
           </div>
         
 
-        <div class="hgt-column three-fourths">
+        <div class="hgt-column three-fourths" style="box-sizing: border-box; display: block; float: left; width: 75%; padding-right: 10px; padding-left: 10px;">
           <div class="hgt-content">
-<h1 id="banner" class="styleguide">Banner</h1>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <table class="body" align="center">
-  <tr>
-    <td class="center" align="center" valign="top">
-      <center>
-        <table class="container full">
-          <tr>
-            <td>
-              <a href="#" class="u-hidden-lap" target="_blank">
-                <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+<h1 id="banner" class="styleguide" style="font-size: 2.25em; line-height: 1.2; font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif; color: #333; word-wrap: break-word; box-sizing: border-box; position: relative; font-weight: bold; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; letter-spacing: 0; word-break: normal; margin: 1em 0 16px; padding: 0 0 0.3em;">Banner</h1>
+<div class="codeExample" style="border-radius: 4px; margin: 10px 0; border: 1px solid #eee;">
+  <div class="exampleOutput" style="padding: 16px;">
+    <table class="body" align="center" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; padding: 0;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="center" align="center" valign="top" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: center; padding: 0;">
+      <center style="width: 100%; min-width: 580px;">
+        <table class="container full" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 100% !important; margin: 0 auto; padding: 0;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
+              <a href="#" class="u-hidden-lap" target="_blank" style="display: block; color: #000; text-decoration: none;">
+                <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" style="display: block; height: auto; max-width: 100%; width: 100%; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto; border: 0;" />
               </a>
 
-              <a href="#" class="u-hidden-mobile" target="_blank">
-                <img src="http://placehold.it/500x500&text=Dekstop%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+              <a href="#" class="u-hidden-mobile" target="_blank" style="display: block; max-height: 0; width: 0; mso-hide: all; overflow: hidden; color: #000; text-decoration: none;">
+                <img src="http://placehold.it/500x500&text=Dekstop%20Image" class="u-responsive u-responsive--full" alt="Alt" style="mso-hide: all; display: block; height: auto; max-width: 100%; width: 100%; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto; border: 0;" />
               </a>
             </td>
 
-            <td class="expander"></td>
+            <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
           </tr>
         </table>
       </center>
@@ -120,58 +501,58 @@
 </table>
 
   </div>
-  <div class="codeBlock">
+  <div class="codeBlock" style="border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
     <div class="highlight">
-      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"body"</span> <span class="na">align=</span><span class="s">"center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">align=</span><span class="s">"center"</span> <span class="na">valign=</span><span class="s">"top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;center&gt;</span>
-        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"container full"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
-              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"u-hidden-lap"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/600x400&amp;text=Mobile%20Image"</span> <span class="na">class=</span><span class="s">"u-responsive u-responsive--full"</span> <span class="na">alt=</span><span class="s">"Alt"</span> <span class="nt">/&gt;</span>
-              <span class="nt">&lt;/a&gt;</span>
+      <pre style="margin-top: 0; margin-bottom: 0; overflow: auto; border-radius: 3px; word-wrap: normal; background: #F7F7F7; padding: 16px; font: 13.6px/1.45 Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"body"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span><span class="nt" style="color: #000080;">&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">valign=</span><span class="s" style="color: #d01040;">"top"</span><span class="nt" style="color: #000080;">&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;center&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"container full"</span><span class="nt" style="color: #000080;">&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;td&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-hidden-lap"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;img</span> <span class="na" style="color: #008080;">src=</span><span class="s" style="color: #d01040;">"http://placehold.it/600x400&amp;text=Mobile%20Image"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-responsive u-responsive--full"</span> <span class="na" style="color: #008080;">alt=</span><span class="s" style="color: #d01040;">"Alt"</span> <span class="nt" style="color: #000080;">/&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/a&gt;</span>
 
-              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"u-hidden-mobile"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/500x500&amp;text=Dekstop%20Image"</span> <span class="na">class=</span><span class="s">"u-responsive u-responsive--full"</span> <span class="na">alt=</span><span class="s">"Alt"</span> <span class="nt">/&gt;</span>
-              <span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-hidden-mobile"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;img</span> <span class="na" style="color: #008080;">src=</span><span class="s" style="color: #d01040;">"http://placehold.it/500x500&amp;text=Dekstop%20Image"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-responsive u-responsive--full"</span> <span class="na" style="color: #008080;">alt=</span><span class="s" style="color: #d01040;">"Alt"</span> <span class="nt" style="color: #000080;">/&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/a&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-            <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-          <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/table&gt;</span>
-      <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span></pre>
+            <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;/center&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+<span class="nt" style="color: #000080;">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>
 
-<h1 id="centered" class="styleguide">Centered</h1>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <table class="body" align="center">
-  <tr>
-    <td class="center" align="center" valign="top">
-      <center>
-        <table class="container">
-          <tr>
-            <td>
-              <table class="row u-pvlg">
-                <tr>
-                  <td class="wrapper last">
-                    <table class="twelve columns">
-                      <tr>
-                        <td class="t-center">
-                          <div class="u-padding-vertical-lg">
-                            <a href="#" class="u-hidden-lap" target="_blank">
-                              <img src="http://placehold.it/250x250&text=Mobile%20Image" class="u-responsive" alt="Alt" />
+<h1 id="centered" class="styleguide" style="font-size: 2.25em; line-height: 1.2; font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif; color: #333; word-wrap: break-word; box-sizing: border-box; position: relative; font-weight: bold; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; letter-spacing: 0; word-break: normal; margin: 1em 0 16px; padding: 0 0 0.3em;">Centered</h1>
+<div class="codeExample" style="border-radius: 4px; margin: 10px 0; border: 1px solid #eee;">
+  <div class="exampleOutput" style="padding: 16px;">
+    <table class="body" align="center" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; padding: 0;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="center" align="center" valign="top" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: center; padding: 0;">
+      <center style="width: 100%; min-width: 580px;">
+        <table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 510px; margin: 0 auto; padding: 0;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
+              <table class="row u-pvlg" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 60px 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 555px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
+                          <div class="u-padding-vertical-lg" style="padding-top: 60px !important; padding-bottom: 60px !important;">
+                            <a href="#" class="u-hidden-lap" target="_blank" style="display: block; color: #000; text-decoration: none;">
+                              <img src="http://placehold.it/250x250&text=Mobile%20Image" class="u-responsive" alt="Alt" style="display: block; height: auto; max-width: 100%; width: auto; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto; border: 0;" />
                             </a>
 
-                            <a href="#" class="u-hidden-mobile" target="_blank">
-                              <img src="http://placehold.it/500x500&text=Dekstop%20Image" class="u-responsive" alt="Alt" />
+                            <a href="#" class="u-hidden-mobile" target="_blank" style="display: block; max-height: 0; width: 0; mso-hide: all; overflow: hidden; color: #000; text-decoration: none;">
+                              <img src="http://placehold.it/500x500&text=Dekstop%20Image" class="u-responsive" alt="Alt" style="mso-hide: all; display: block; height: auto; max-width: 100%; width: auto; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto; border: 0;" />
                             </a>
                           </div>
 
@@ -180,7 +561,7 @@
                           </div>
                         </td>
 
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
@@ -189,7 +570,7 @@
               </table>
             </td>
 
-            <td class="expander"></td>
+            <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
           </tr>
         </table>
       </center>
@@ -198,77 +579,77 @@
 </table>
 
   </div>
-  <div class="codeBlock">
+  <div class="codeBlock" style="border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
     <div class="highlight">
-      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"body"</span> <span class="na">align=</span><span class="s">"center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">align=</span><span class="s">"center"</span> <span class="na">valign=</span><span class="s">"top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;center&gt;</span>
-        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"row u-pvlg"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper last"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"twelve columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
-                          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-padding-vertical-lg"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"u-hidden-lap"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
-                              <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/250x250&amp;text=Mobile%20Image"</span> <span class="na">class=</span><span class="s">"u-responsive"</span> <span class="na">alt=</span><span class="s">"Alt"</span> <span class="nt">/&gt;</span>
-                            <span class="nt">&lt;/a&gt;</span>
+      <pre style="margin-top: 0; margin-bottom: 0; overflow: auto; border-radius: 3px; word-wrap: normal; background: #F7F7F7; padding: 16px; font: 13.6px/1.45 Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"body"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span><span class="nt" style="color: #000080;">&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">valign=</span><span class="s" style="color: #d01040;">"top"</span><span class="nt" style="color: #000080;">&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;center&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"container"</span><span class="nt" style="color: #000080;">&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;td&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"row u-pvlg"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper last"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"twelve columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;div</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-padding-vertical-lg"</span><span class="nt" style="color: #000080;">&gt;</span>
+                            <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-hidden-lap"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>
+                              <span class="nt" style="color: #000080;">&lt;img</span> <span class="na" style="color: #008080;">src=</span><span class="s" style="color: #d01040;">"http://placehold.it/250x250&amp;text=Mobile%20Image"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-responsive"</span> <span class="na" style="color: #008080;">alt=</span><span class="s" style="color: #d01040;">"Alt"</span> <span class="nt" style="color: #000080;">/&gt;</span>
+                            <span class="nt" style="color: #000080;">&lt;/a&gt;</span>
 
-                            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"u-hidden-mobile"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
-                              <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/500x500&amp;text=Dekstop%20Image"</span> <span class="na">class=</span><span class="s">"u-responsive"</span> <span class="na">alt=</span><span class="s">"Alt"</span> <span class="nt">/&gt;</span>
-                            <span class="nt">&lt;/a&gt;</span>
-                          <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-hidden-mobile"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>
+                              <span class="nt" style="color: #000080;">&lt;img</span> <span class="na" style="color: #008080;">src=</span><span class="s" style="color: #d01040;">"http://placehold.it/500x500&amp;text=Dekstop%20Image"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-responsive"</span> <span class="na" style="color: #008080;">alt=</span><span class="s" style="color: #d01040;">"Alt"</span> <span class="nt" style="color: #000080;">/&gt;</span>
+                            <span class="nt" style="color: #000080;">&lt;/a&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;/div&gt;</span>
 
-                          <span class="nt">&lt;div&gt;</span>
-                            By Someone<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>From Somewhere
-                          <span class="nt">&lt;/div&gt;</span>
-                        <span class="nt">&lt;/td&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;div&gt;</span>
+                            By Someone<span class="nt" style="color: #000080;">&lt;br</span> <span class="nt" style="color: #000080;">/&gt;</span>From Somewhere
+                          <span class="nt" style="color: #000080;">&lt;/div&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-            <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-          <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/table&gt;</span>
-      <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span></pre>
+            <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;/center&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+<span class="nt" style="color: #000080;">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>
 
-<h1 id="flag" class="styleguide">Flag</h1>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <table class="body" align="center">
-  <tr>
-    <td class="center" align="center" valign="top">
-      <center>
-        <table class="container">
-          <tr>
-            <td>
-              <table class="flag">
-                <tr>
-                  <td class="flag-body">&nbsp;</td>
+<h1 id="flag" class="styleguide" style="font-size: 2.25em; line-height: 1.2; font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif; color: #333; word-wrap: break-word; box-sizing: border-box; position: relative; font-weight: bold; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; letter-spacing: 0; word-break: normal; margin: 1em 0 16px; padding: 0 0 0.3em;">Flag</h1>
+<div class="codeExample" style="border-radius: 4px; margin: 10px 0; border: 1px solid #eee;">
+  <div class="exampleOutput" style="padding: 16px;">
+    <table class="body" align="center" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; padding: 0;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="center" align="center" valign="top" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: center; padding: 0;">
+      <center style="width: 100%; min-width: 580px;">
+        <table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 510px; margin: 0 auto; padding: 0;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
+              <table class="flag" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; padding: 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="flag-body" style="border-collapse: collapse !important; width: 50%; vertical-align: middle; text-align: left; padding: 0;" align="left" valign="middle">&nbsp;</td>
 
-                  <td class="flag-image">
-                    <a href="#" target="_blank"><img src="http://placehold.it/150x150&text=Centered%20Image" alt="Alt" class="u-responsive u-responsive--full" /></a>
+                  <td class="flag-image" style="border-collapse: collapse !important; width: auto; vertical-align: top; text-align: left; max-width: 220px; min-width: 220px; padding: 0;" align="left" valign="top">
+                    <a href="#" target="_blank" style="color: #000; text-decoration: none;"><img src="http://placehold.it/150x150&text=Centered%20Image" alt="Alt" class="u-responsive u-responsive--full" style="display: block; height: auto; max-width: 100%; width: 100%; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto; border: 0;" /></a>
                   </td>
 
-                  <td class="flag-body">
-                    <div><a href="#" target="_blank">Some Girl</a></div>
-                    <div>Venture Partner at<br /><a href="#" target="_blank">A Good Company</a></div>
+                  <td class="flag-body" style="border-collapse: collapse !important; width: 50%; vertical-align: middle; text-align: left; padding: 0;" align="left" valign="middle">
+                    <div><a href="#" target="_blank" style="color: #000; text-decoration: none;">Some Girl</a></div>
+                    <div>Venture Partner at<br /><a href="#" target="_blank" style="color: #000; text-decoration: none;">A Good Company</a></div>
                   </td>
                 </tr>
               </table>
@@ -281,194 +662,194 @@
 </table>
 
   </div>
-  <div class="codeBlock">
+  <div class="codeBlock" style="border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
     <div class="highlight">
-      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"body"</span> <span class="na">align=</span><span class="s">"center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">align=</span><span class="s">"center"</span> <span class="na">valign=</span><span class="s">"top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;center&gt;</span>
-        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"flag"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"flag-body"</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/td&gt;</span>
+      <pre style="margin-top: 0; margin-bottom: 0; overflow: auto; border-radius: 3px; word-wrap: normal; background: #F7F7F7; padding: 16px; font: 13.6px/1.45 Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"body"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span><span class="nt" style="color: #000080;">&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">valign=</span><span class="s" style="color: #d01040;">"top"</span><span class="nt" style="color: #000080;">&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;center&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"container"</span><span class="nt" style="color: #000080;">&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;td&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"flag"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"flag-body"</span><span class="nt" style="color: #000080;">&gt;</span><span class="ni" style="color: #800080;">&amp;nbsp;</span><span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"flag-image"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/150x150&amp;text=Centered%20Image"</span> <span class="na">alt=</span><span class="s">"Alt"</span> <span class="na">class=</span><span class="s">"u-responsive u-responsive--full"</span> <span class="nt">/&gt;&lt;/a&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"flag-image"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;&lt;img</span> <span class="na" style="color: #008080;">src=</span><span class="s" style="color: #d01040;">"http://placehold.it/150x150&amp;text=Centered%20Image"</span> <span class="na" style="color: #008080;">alt=</span><span class="s" style="color: #d01040;">"Alt"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-responsive u-responsive--full"</span> <span class="nt" style="color: #000080;">/&gt;&lt;/a&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"flag-body"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;div&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Some Girl<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-                    <span class="nt">&lt;div&gt;</span>Venture Partner at<span class="nt">&lt;br</span> <span class="nt">/&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>A Good Company<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/table&gt;</span>
-      <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span></pre>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"flag-body"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;div&gt;&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>Some Girl<span class="nt" style="color: #000080;">&lt;/a&gt;&lt;/div&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;div&gt;</span>Venture Partner at<span class="nt" style="color: #000080;">&lt;br</span> <span class="nt" style="color: #000080;">/&gt;&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>A Good Company<span class="nt" style="color: #000080;">&lt;/a&gt;&lt;/div&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;/center&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+<span class="nt" style="color: #000080;">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>
 
-<h1 id="grid" class="styleguide">Grid</h1>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <table class="body" align="center">
-  <tr>
-    <td class="center" align="center" valign="top">
-      <center>
-        <table class="container">
-          <tr>
-            <td>
-              <table class="row u-ptlg">
-                <tr>
-                  <td class="wrapper">
-                    <table class="one columns">
-                      <tr>
-                        <td class="t-center">
+<h1 id="grid" class="styleguide" style="font-size: 2.25em; line-height: 1.2; font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif; color: #333; word-wrap: break-word; box-sizing: border-box; position: relative; font-weight: bold; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; letter-spacing: 0; word-break: normal; margin: 1em 0 16px; padding: 0 0 0.3em;">Grid</h1>
+<div class="codeExample" style="border-radius: 4px; margin: 10px 0; border: 1px solid #eee;">
+  <div class="exampleOutput" style="padding: 16px;">
+    <table class="body" align="center" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; padding: 0;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="center" align="center" valign="top" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: center; padding: 0;">
+      <center style="width: 100%; min-width: 580px;">
+        <table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 510px; margin: 0 auto; padding: 0;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
+              <table class="row u-ptlg" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 60px 0 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="one columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 46.25px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           One
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
-                  <td class="wrapper last">
-                    <table class="eleven columns">
-                      <tr>
-                        <td class="t-center">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="eleven columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 508.75px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Eleven
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
                 </tr>
               </table>
 
-              <table class="row u-ptlg">
-                <tr>
-                  <td class="wrapper">
-                    <table class="two columns">
-                      <tr>
-                        <td class="t-center">
+              <table class="row u-ptlg" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 60px 0 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="two columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 92.5px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Two
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
-                  <td class="wrapper last">
-                    <table class="ten columns">
-                      <tr>
-                        <td class="t-center">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="ten columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 462.5px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Ten
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
                 </tr>
               </table>
 
-              <table class="row u-ptlg">
-                <tr>
-                  <td class="wrapper">
-                    <table class="three columns">
-                      <tr>
-                        <td class="t-center">
+              <table class="row u-ptlg" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 60px 0 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="three columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 138.75px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Three
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
-                  <td class="wrapper last">
-                    <table class="nine columns">
-                      <tr>
-                        <td class="t-center">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="nine columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 416.25px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Nine
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
                 </tr>
               </table>
 
-              <table class="row u-ptlg">
-                <tr>
-                  <td class="wrapper">
-                    <table class="four columns">
-                      <tr>
-                        <td class="t-center">
+              <table class="row u-ptlg" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 60px 0 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="four columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 185px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Four
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
-                  <td class="wrapper last">
-                    <table class="eight columns">
-                      <tr>
-                        <td class="t-center">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="eight columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 370px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Eight
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
                 </tr>
               </table>
 
-              <table class="row u-ptlg">
-                <tr>
-                  <td class="wrapper">
-                    <table class="five columns">
-                      <tr>
-                        <td class="t-center">
+              <table class="row u-ptlg" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 60px 0 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="five columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 231.25px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Five
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
-                  <td class="wrapper last">
-                    <table class="seven columns">
-                      <tr>
-                        <td class="t-center">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="seven columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 323.75px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Seven
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
                 </tr>
               </table>
 
-              <table class="row u-pvlg">
-                <tr>
-                  <td class="wrapper">
-                    <table class="six columns">
-                      <tr>
-                        <td class="t-center">
+              <table class="row u-pvlg" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 60px 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="six columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 277.5px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Six
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
-                  <td class="wrapper last">
-                    <table class="six columns">
-                      <tr>
-                        <td class="t-center">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="six columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 277.5px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
                           Six
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
@@ -483,209 +864,209 @@
 </table>
 
   </div>
-  <div class="codeBlock">
+  <div class="codeBlock" style="border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
     <div class="highlight">
-      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"body"</span> <span class="na">align=</span><span class="s">"center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">align=</span><span class="s">"center"</span> <span class="na">valign=</span><span class="s">"top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;center&gt;</span>
-        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"row u-ptlg"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"one columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+      <pre style="margin-top: 0; margin-bottom: 0; overflow: auto; border-radius: 3px; word-wrap: normal; background: #F7F7F7; padding: 16px; font: 13.6px/1.45 Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"body"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span><span class="nt" style="color: #000080;">&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">valign=</span><span class="s" style="color: #d01040;">"top"</span><span class="nt" style="color: #000080;">&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;center&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"container"</span><span class="nt" style="color: #000080;">&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;td&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"row u-ptlg"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"one columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           One
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper last"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"eleven columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper last"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"eleven columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Eleven
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
 
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"row u-ptlg"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"two columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"row u-ptlg"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"two columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Two
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper last"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"ten columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper last"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"ten columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Ten
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
 
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"row u-ptlg"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"three columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"row u-ptlg"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"three columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Three
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper last"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"nine columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper last"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"nine columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Nine
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
 
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"row u-ptlg"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"four columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"row u-ptlg"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"four columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Four
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper last"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"eight columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper last"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"eight columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Eight
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
 
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"row u-ptlg"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"five columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"row u-ptlg"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"five columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Five
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper last"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"seven columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper last"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"seven columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Seven
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
 
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"row u-pvlg"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"six columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"row u-pvlg"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"six columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Six
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper last"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"six columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper last"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"six columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                           Six
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
-                  <span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/table&gt;</span>
-      <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span></pre>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;/center&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+<span class="nt" style="color: #000080;">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>
 
-<h1 id="mailchimp" class="styleguide">Mailchimp</h1>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <table class="body" align="center">
-  <tr>
-    <td class="center" align="center" valign="top">
-      <center class="mailchimp u-padding-top-sm u-padding-bottom-md">
-        <table class="container">
-          <tr>
-            <td>
-              <table class="row">
-                <tr>
-                  <td class="wrapper last">
+<h1 id="mailchimp" class="styleguide" style="font-size: 2.25em; line-height: 1.2; font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif; color: #333; word-wrap: break-word; box-sizing: border-box; position: relative; font-weight: bold; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; letter-spacing: 0; word-break: normal; margin: 1em 0 16px; padding: 0 0 0.3em;">Mailchimp</h1>
+<div class="codeExample" style="border-radius: 4px; margin: 10px 0; border: 1px solid #eee;">
+  <div class="exampleOutput" style="padding: 16px;">
+    <table class="body" align="center" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; padding: 0;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="center" align="center" valign="top" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: center; padding: 0;">
+      <center class="mailchimp u-padding-top-sm u-padding-bottom-md" style="padding-top: 15px !important; padding-bottom: 30px !important; width: 100%; min-width: 580px; color: white; background: black;">
+        <table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 510px; margin: 0 auto; padding: 0;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
+              <table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
 
-                    <table class="twelve columns">
-                      <tr>
-                        <td class="t-center">
-                          <p class="u-text-xs t-center">
+                    <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 555px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
+                          <p class="u-text-xs t-center" style="text-align: center; font-size: 18px; font-weight: normal; letter-spacing: 0; line-height: 1.25; word-break: normal; margin: 0; padding: 0;" align="center">
                             Copyright &copy; 2015
                           </p>
 
-                          <p class="u-text-xs t-center">
+                          <p class="u-text-xs t-center" style="text-align: center; font-size: 18px; font-weight: normal; letter-spacing: 0; line-height: 1.25; word-break: normal; margin: 0; padding: 0;" align="center">
                             Collaborative Fund.
                           </p>
 
-                          <p class="u-text-xs t-center">
+                          <p class="u-text-xs t-center" style="text-align: center; font-size: 18px; font-weight: normal; letter-spacing: 0; line-height: 1.25; word-break: normal; margin: 0; padding: 0;" align="center">
                             All rights reserved.
                           </p>
 
-                          <p class="u-text-xs t-center u-ptmd">
-                            <a href="*|UNSUB|*">Unsubscribe?</a>
+                          <p class="u-text-xs t-center u-ptmd" style="text-align: center; font-size: 18px; font-weight: normal; letter-spacing: 0; line-height: 1.25; word-break: normal; margin: 0; padding: 30px 0 0;" align="center">
+                            <a href="*|UNSUB|*" style="color: white !important; text-decoration: none;">Unsubscribe?</a>
                           </p>
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
 
@@ -701,98 +1082,98 @@
 </table>
 
   </div>
-  <div class="codeBlock">
+  <div class="codeBlock" style="border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
     <div class="highlight">
-      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"body"</span> <span class="na">align=</span><span class="s">"center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">align=</span><span class="s">"center"</span> <span class="na">valign=</span><span class="s">"top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;center</span> <span class="na">class=</span><span class="s">"mailchimp u-padding-top-sm u-padding-bottom-md"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
-              <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;tr&gt;</span>
-                  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper last"</span><span class="nt">&gt;</span>
+      <pre style="margin-top: 0; margin-bottom: 0; overflow: auto; border-radius: 3px; word-wrap: normal; background: #F7F7F7; padding: 16px; font: 13.6px/1.45 Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"body"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span><span class="nt" style="color: #000080;">&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">valign=</span><span class="s" style="color: #d01040;">"top"</span><span class="nt" style="color: #000080;">&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;center</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"mailchimp u-padding-top-sm u-padding-bottom-md"</span><span class="nt" style="color: #000080;">&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"container"</span><span class="nt" style="color: #000080;">&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;td&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"row"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"wrapper last"</span><span class="nt" style="color: #000080;">&gt;</span>
 
-                    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"twelve columns"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;tr&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"t-center"</span><span class="nt">&gt;</span>
-                          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-xs t-center"</span><span class="nt">&gt;</span>
-                            Copyright <span class="ni">&amp;copy;</span> 2015
-                          <span class="nt">&lt;/p&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"twelve columns"</span><span class="nt" style="color: #000080;">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;p</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-text-xs t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
+                            Copyright <span class="ni" style="color: #800080;">&amp;copy;</span> 2015
+                          <span class="nt" style="color: #000080;">&lt;/p&gt;</span>
 
-                          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-xs t-center"</span><span class="nt">&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;p</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-text-xs t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                             Collaborative Fund.
-                          <span class="nt">&lt;/p&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;/p&gt;</span>
 
-                          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-xs t-center"</span><span class="nt">&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;p</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-text-xs t-center"</span><span class="nt" style="color: #000080;">&gt;</span>
                             All rights reserved.
-                          <span class="nt">&lt;/p&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;/p&gt;</span>
 
-                          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-xs t-center u-ptmd"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"*|UNSUB|*"</span><span class="nt">&gt;</span>Unsubscribe?<span class="nt">&lt;/a&gt;</span>
-                          <span class="nt">&lt;/p&gt;</span>
-                        <span class="nt">&lt;/td&gt;</span>
-                        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                      <span class="nt">&lt;/tr&gt;</span>
-                    <span class="nt">&lt;/table&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;p</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-text-xs t-center u-ptmd"</span><span class="nt" style="color: #000080;">&gt;</span>
+                            <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"*|UNSUB|*"</span><span class="nt" style="color: #000080;">&gt;</span>Unsubscribe?<span class="nt" style="color: #000080;">&lt;/a&gt;</span>
+                          <span class="nt" style="color: #000080;">&lt;/p&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
 
-                  <span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;/tr&gt;</span>
-              <span class="nt">&lt;/table&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/table&gt;</span>
-      <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span></pre>
+                  <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;/center&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+<span class="nt" style="color: #000080;">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>
 
-<h1 id="media" class="styleguide">Media</h1>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <table class="body" align="center">
-  <tr>
-    <td class="center" align="center" valign="top">
-      <center>
-        <table class="container full">
-          <tr>
-            <td>
+<h1 id="media" class="styleguide" style="font-size: 2.25em; line-height: 1.2; font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif; color: #333; word-wrap: break-word; box-sizing: border-box; position: relative; font-weight: bold; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; letter-spacing: 0; word-break: normal; margin: 1em 0 16px; padding: 0 0 0.3em;">Media</h1>
+<div class="codeExample" style="border-radius: 4px; margin: 10px 0; border: 1px solid #eee;">
+  <div class="exampleOutput" style="padding: 16px;">
+    <table class="body" align="center" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; padding: 0;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="center" align="center" valign="top" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: center; padding: 0;">
+      <center style="width: 100%; min-width: 580px;">
+        <table class="container full" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 100% !important; margin: 0 auto; padding: 0;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
               <div class="media">
-                <div class="media-image">
-                  <a href="#" class="u-hidden-lap" target="_blank">
-                    <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+                <div class="media-image" style="display: block; width: 100%;">
+                  <a href="#" class="u-hidden-lap" target="_blank" style="display: block; color: #000; text-decoration: none;">
+                    <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" style="display: block; height: auto; max-width: 100%; width: 100%; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto; border: 0;" />
                   </a>
 
-                  <a href="#" class="u-hidden-mobile" target="_blank">
-                    <img src="http://placehold.it/125x125&text=Dekstop%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+                  <a href="#" class="u-hidden-mobile" target="_blank" style="display: block; max-height: 0; width: 0; mso-hide: all; overflow: hidden; color: #000; text-decoration: none;">
+                    <img src="http://placehold.it/125x125&text=Dekstop%20Image" class="u-responsive u-responsive--full" alt="Alt" style="mso-hide: all; display: block; height: auto; max-width: 100%; width: 100%; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto; border: 0;" />
                   </a>
                 </div>
 
-                <div class="media-body">
-                  <table>
-                    <tr>
-                      <td>
+                <div class="media-body" style="display: block; width: 100%; vertical-align: middle;">
+                  <table style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
+                    <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                      <td style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
                         <div>A witty title.</div>
-                        <div>Some text with a <a href="#" target="_blank">Link</a>, and another <a href="" target="_blank">Link</a>.</div>
-                        <a href="#" target="_blank">Link</a>
+                        <div>Some text with a <a href="#" target="_blank" style="color: #000; text-decoration: none;">Link</a>, and another <a href="" target="_blank" style="color: #000; text-decoration: none;">Link</a>.</div>
+                        <a href="#" target="_blank" style="color: #000; text-decoration: none;">Link</a>
                       </td>
 
-                      <td class="gutter u-tam">
+                      <td class="gutter u-tam" style="border-collapse: collapse !important; width: 45px; vertical-align: top; text-align: left; min-width: 45px; max-width: 45px; padding: 0;" align="left" valign="top">
                         {% include 'social_links' %}
                       </td>
 
-                      <td class="expander"></td>
+                      <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                     </tr>
                   </table>
                 </div>
               </div>
             </td>
 
-            <td class="expander"></td>
+            <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
           </tr>
         </table>
       </center>
@@ -801,76 +1182,76 @@
 </table>
 
   </div>
-  <div class="codeBlock">
+  <div class="codeBlock" style="border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
     <div class="highlight">
-      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"body"</span> <span class="na">align=</span><span class="s">"center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">align=</span><span class="s">"center"</span> <span class="na">valign=</span><span class="s">"top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;center&gt;</span>
-        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"container full"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-image"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"u-hidden-lap"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/600x400&amp;text=Mobile%20Image"</span> <span class="na">class=</span><span class="s">"u-responsive u-responsive--full"</span> <span class="na">alt=</span><span class="s">"Alt"</span> <span class="nt">/&gt;</span>
-                  <span class="nt">&lt;/a&gt;</span>
+      <pre style="margin-top: 0; margin-bottom: 0; overflow: auto; border-radius: 3px; word-wrap: normal; background: #F7F7F7; padding: 16px; font: 13.6px/1.45 Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"body"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span><span class="nt" style="color: #000080;">&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">valign=</span><span class="s" style="color: #d01040;">"top"</span><span class="nt" style="color: #000080;">&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;center&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"container full"</span><span class="nt" style="color: #000080;">&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;td&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;div</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"media"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;div</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"media-image"</span><span class="nt" style="color: #000080;">&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-hidden-lap"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;img</span> <span class="na" style="color: #008080;">src=</span><span class="s" style="color: #d01040;">"http://placehold.it/600x400&amp;text=Mobile%20Image"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-responsive u-responsive--full"</span> <span class="na" style="color: #008080;">alt=</span><span class="s" style="color: #d01040;">"Alt"</span> <span class="nt" style="color: #000080;">/&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/a&gt;</span>
 
-                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"u-hidden-mobile"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/125x125&amp;text=Dekstop%20Image"</span> <span class="na">class=</span><span class="s">"u-responsive u-responsive--full"</span> <span class="na">alt=</span><span class="s">"Alt"</span> <span class="nt">/&gt;</span>
-                  <span class="nt">&lt;/a&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-hidden-mobile"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;img</span> <span class="na" style="color: #008080;">src=</span><span class="s" style="color: #d01040;">"http://placehold.it/125x125&amp;text=Dekstop%20Image"</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"u-responsive u-responsive--full"</span> <span class="na" style="color: #008080;">alt=</span><span class="s" style="color: #d01040;">"Alt"</span> <span class="nt" style="color: #000080;">/&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/a&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/div&gt;</span>
 
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;table&gt;</span>
-                    <span class="nt">&lt;tr&gt;</span>
-                      <span class="nt">&lt;td&gt;</span>
-                        <span class="nt">&lt;div&gt;</span>A witty title.<span class="nt">&lt;/div&gt;</span>
-                        <span class="nt">&lt;div&gt;</span>Some text with a <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>, and another <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/div&gt;</span>
-                        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
-                      <span class="nt">&lt;/td&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;div</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"media-body"</span><span class="nt" style="color: #000080;">&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;table&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;td&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;div&gt;</span>A witty title.<span class="nt" style="color: #000080;">&lt;/div&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;div&gt;</span>Some text with a <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>Link<span class="nt" style="color: #000080;">&lt;/a&gt;</span>, and another <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">""</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>Link<span class="nt" style="color: #000080;">&lt;/a&gt;</span>.<span class="nt" style="color: #000080;">&lt;/div&gt;</span>
+                        <span class="nt" style="color: #000080;">&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span> <span class="na" style="color: #008080;">target=</span><span class="s" style="color: #d01040;">"_blank"</span><span class="nt" style="color: #000080;">&gt;</span>Link<span class="nt" style="color: #000080;">&lt;/a&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-                      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"gutter u-tam"</span><span class="nt">&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"gutter u-tam"</span><span class="nt" style="color: #000080;">&gt;</span>
                         {% include 'social_links' %}
-                      <span class="nt">&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-                      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-                    <span class="nt">&lt;/tr&gt;</span>
-                  <span class="nt">&lt;/table&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
-              <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
+                      <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+                    <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+                  <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;/div&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/div&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-            <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;/td&gt;</span>
-          <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/table&gt;</span>
-      <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span></pre>
+            <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"expander"</span><span class="nt" style="color: #000080;">&gt;&lt;/td&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;/center&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+<span class="nt" style="color: #000080;">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>
 
-<h1 id="split" class="styleguide">Split</h1>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <table class="body" align="center">
-  <tr>
-    <td class="center" align="center" valign="top">
-      <center>
-        <table class="container">
-          <tr>
-            <td class="split">
-              <div class="pull-right">
-                <div><a href="#">Some Guy</a></div>
+<h1 id="split" class="styleguide" style="font-size: 2.25em; line-height: 1.2; font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif; color: #333; word-wrap: break-word; box-sizing: border-box; position: relative; font-weight: bold; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; letter-spacing: 0; word-break: normal; margin: 1em 0 16px; padding: 0 0 0.3em;">Split</h1>
+<div class="codeExample" style="border-radius: 4px; margin: 10px 0; border: 1px solid #eee;">
+  <div class="exampleOutput" style="padding: 16px;">
+    <table class="body" align="center" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; padding: 0;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="center" align="center" valign="top" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: center; padding: 0;">
+      <center style="width: 100%; min-width: 580px;">
+        <table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 510px; margin: 0 auto; padding: 0;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td class="split" style="border-collapse: collapse !important; width: 50%; vertical-align: bottom; text-align: left; padding: 0;" align="left" valign="bottom">
+              <div class="pull-right" style="float: right;">
+                <div><a href="#" style="color: #000; text-decoration: none;">Some Guy</a></div>
                 <div>Founder of Some<br />Company.</div>
               </div>
             </td>
 
-            <td class="split image">
-              <div class="pull-left">
-                <img src="http://placehold.it/150x150&text=Centered%20Image" alt="Alt" />
+            <td class="split image" style="border-collapse: collapse !important; width: 50%; vertical-align: bottom; text-align: left; line-height: 0; padding: 0;" align="left" valign="bottom">
+              <div class="pull-left" style="float: left;">
+                <img src="http://placehold.it/150x150&text=Centered%20Image" alt="Alt" style="outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto;" />
               </div>
             </td>
           </tr>
@@ -881,69 +1262,69 @@
 </table>
 
   </div>
-  <div class="codeBlock">
+  <div class="codeBlock" style="border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
     <div class="highlight">
-      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"body"</span> <span class="na">align=</span><span class="s">"center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">align=</span><span class="s">"center"</span> <span class="na">valign=</span><span class="s">"top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;center&gt;</span>
-        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"split"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-right"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Some Guy<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-                <span class="nt">&lt;div&gt;</span>Founder of Some<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>Company.<span class="nt">&lt;/div&gt;</span>
-              <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
+      <pre style="margin-top: 0; margin-bottom: 0; overflow: auto; border-radius: 3px; word-wrap: normal; background: #F7F7F7; padding: 16px; font: 13.6px/1.45 Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"body"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span><span class="nt" style="color: #000080;">&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">align=</span><span class="s" style="color: #d01040;">"center"</span> <span class="na" style="color: #008080;">valign=</span><span class="s" style="color: #d01040;">"top"</span><span class="nt" style="color: #000080;">&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;center&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;table</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"container"</span><span class="nt" style="color: #000080;">&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;tr&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"split"</span><span class="nt" style="color: #000080;">&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;div</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"pull-right"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;div&gt;&lt;a</span> <span class="na" style="color: #008080;">href=</span><span class="s" style="color: #d01040;">"#"</span><span class="nt" style="color: #000080;">&gt;</span>Some Guy<span class="nt" style="color: #000080;">&lt;/a&gt;&lt;/div&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;div&gt;</span>Founder of Some<span class="nt" style="color: #000080;">&lt;br</span> <span class="nt" style="color: #000080;">/&gt;</span>Company.<span class="nt" style="color: #000080;">&lt;/div&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/div&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
 
-            <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"split image"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/150x150&amp;text=Centered%20Image"</span> <span class="na">alt=</span><span class="s">"Alt"</span> <span class="nt">/&gt;</span>
-              <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/table&gt;</span>
-      <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span></pre>
+            <span class="nt" style="color: #000080;">&lt;td</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"split image"</span><span class="nt" style="color: #000080;">&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;div</span> <span class="na" style="color: #008080;">class=</span><span class="s" style="color: #d01040;">"pull-left"</span><span class="nt" style="color: #000080;">&gt;</span>
+                <span class="nt" style="color: #000080;">&lt;img</span> <span class="na" style="color: #008080;">src=</span><span class="s" style="color: #d01040;">"http://placehold.it/150x150&amp;text=Centered%20Image"</span> <span class="na" style="color: #008080;">alt=</span><span class="s" style="color: #d01040;">"Alt"</span> <span class="nt" style="color: #000080;">/&gt;</span>
+              <span class="nt" style="color: #000080;">&lt;/div&gt;</span>
+            <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+          <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+        <span class="nt" style="color: #000080;">&lt;/table&gt;</span>
+      <span class="nt" style="color: #000080;">&lt;/center&gt;</span>
+    <span class="nt" style="color: #000080;">&lt;/td&gt;</span>
+  <span class="nt" style="color: #000080;">&lt;/tr&gt;</span>
+<span class="nt" style="color: #000080;">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>
 
-<h1 id="two-columns" class="styleguide">Two Columns</h1>
+<h1 id="two-columns" class="styleguide" style="font-size: 2.25em; line-height: 1.2; font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif; color: #333; word-wrap: break-word; box-sizing: border-box; position: relative; font-weight: bold; border-bottom-width: 1px; border-bottom-color: #EEE; border-bottom-style: solid; letter-spacing: 0; word-break: normal; margin: 1em 0 16px; padding: 0 0 0.3em;">Two Columns</h1>
 
-<table class="body" align="center">
-  <tr>
-    <td class="center" align="center" valign="top">
-      <center>
-        <table class="container">
-          <tr>
-            <td>
-              <table class="row u-pvlg">
-                <tr>
-                  <td class="wrapper">
-                    <table class="six columns">
-                      <tr>
-                        <td class="t-center">
-                          <div class="u-padding-vertical-lg">
+<table class="body" align="center" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; padding: 0;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="center" align="center" valign="top" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: center; padding: 0;">
+      <center style="width: 100%; min-width: 580px;">
+        <table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 510px; margin: 0 auto; padding: 0;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
+              <table class="row u-pvlg" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 60px 0;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="six columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 277.5px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
+                          <div class="u-padding-vertical-lg" style="padding-top: 60px !important; padding-bottom: 60px !important;">
                             When you have content on the left …
                           </div>
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
 
-                  <td class="wrapper last">
-                    <table class="six columns">
-                      <tr>
-                        <td class="t-center">
-                          <div class="u-padding-vertical-lg">
+                  <td class="wrapper last" style="border-collapse: collapse !important; width: 100%; vertical-align: top; text-align: left; position: relative; padding: 0;" align="left" valign="top">
+                    <table class="six columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 277.5px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="t-center" style="text-align: center; border-collapse: collapse !important; width: 100%; vertical-align: top; padding: 0;" align="center" valign="top">
+                          <div class="u-padding-vertical-lg" style="padding-top: 60px !important; padding-bottom: 60px !important;">
                             You will undobtedly want content on the right.
                           </div>
                         </td>
-                        <td class="expander"></td>
+                        <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
                       </tr>
                     </table>
                   </td>
@@ -952,31 +1333,31 @@
               </table>
             </td>
 
-            <td class="expander"></td>
+            <td class="expander" style="border-collapse: collapse !important; width: 0; vertical-align: top; text-align: left; visibility: hidden; padding: 0;" align="left" valign="top"></td>
           </tr>
         </table>
       </center>
     </td>
   </tr>
 </table>
-<div class="codeBlock">
+<div class="codeBlock" style="border-top-left-radius: 0; border-top-right-radius: 0; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
   <div class="highlight">
-    <pre></pre>
+    <pre style="margin-top: 0; margin-bottom: 0; overflow: auto; border-radius: 3px; word-wrap: normal; background: #F7F7F7; padding: 16px; font: 13.6px/1.45 Consolas, 'Liberation Mono', Menlo, Courier, monospace;"></pre>
   </div>
 </div>        </div>
       </div>
     </div>
 
-    <footer class="hgt-footer">
-      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    <footer class="hgt-footer" style="font-size: 12px; line-height: 1.5; font-family: Helvetica,arial,freesans,clean,sans-serif; color: #777; box-sizing: border-box; position: relative; margin-top: 40px; padding-top: 40px; padding-bottom: 40px; border-top-width: 1px; border-top-color: #EEE; border-top-style: solid;">
+      Built using <a href="https://github.com/trulia/hologram" style="color: #4183C4; text-decoration: none;">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme" style="color: #4183C4; text-decoration: none;">Hologram Github Theme</a>
     </footer>
   </div>
 
-  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
-  <script src="scripts/vendor/sticky.min.js"></script>
-  <script src="scripts/vendor/infinite.min.js"></script>
-  <script src="scripts/hgt.js"></script>
+  
+  
+  
+  
+  
 
   
 
