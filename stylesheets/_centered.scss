@@ -1,0 +1,54 @@
+/*doc
+ ---
+ title: Centered
+ name: centered
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+              <table class="row u-pvlg">
+                <tr>
+                  <td class="wrapper last">
+                    <table class="twelve columns">
+                      <tr>
+                        <td class="t-center">
+                          <div class="u-padding-vertical-lg">
+                            <a href="#" class="u-hidden-lap" target="_blank">
+                              <img src="http://placehold.it/250x250&text=Mobile%20Image" class="u-responsive" alt="Alt" />
+                            </a>
+
+                            <a href="#" class="u-hidden-mobile" target="_blank">
+                              <img src="http://placehold.it/500x500&text=Dekstop%20Image" class="u-responsive" alt="Alt" />
+                            </a>
+                          </div>
+
+                          <div>
+                            By Someone<br />From Somewhere
+                          </div>
+                        </td>
+
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                </tr>
+              </table>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/

@@ -1,0 +1,43 @@
+/*doc
+ ---
+ title: Split
+ name: split
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td class="split">
+              <div class="pull-right">
+                <div><a href="#">Some Guy</a></div>
+                <div>Founder of Some<br />Company.</div>
+              </div>
+            </td>
+
+            <td class="split image">
+              <div class="pull-left">
+                <img src="http://placehold.it/150x150&text=Centered%20Image" alt="Alt" />
+              </div>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+
+.split {
+  width: 50%;
+  vertical-align: bottom;
+
+  &.image {
+    line-height: 0;
+  }
+}

@@ -1,0 +1,88 @@
+/* v0
+ */
+
+/* Variables
+ *  - - - - - - - - - - - - - - - - */
+$color-base:                             #000;
+
+/*doc
+ ---
+ title: Stencil
+ name: stencil
+ category: Libraries
+ ---
+
+[Stencil Mail](http://dijkstra.io/stencil-mail/docs/) has been included.
+*/
+
+@import 'stencil/stencil';
+
+@import 'banner';
+@import 'centered';
+@import 'flag';
+@import 'grid';
+@import 'mailchimp';
+@import 'media';
+@import 'split';
+@import 'stacked';
+@import 'two_columns';
+
+/**
+ *  Base
+ *  - - - - - - - - - - - - - - - - */
+
+body {
+  color: $color-base;
+  font-size: $text-sm;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: $text-sm;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  word-break: normal;
+}
+
+p {
+  line-height: $line-sm;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+}
+
+hr {
+  background-color: $color-base;
+  border: none;
+  color: $color-base;
+  height: 1px;
+}
+
+a {
+  color: $color-base;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    outline: 0;
+    color: $color-base;
+    text-decoration: none;
+  }
+}

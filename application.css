@@ -1,0 +1,1762 @@
+@charset "UTF-8";
+/* v0
+ */
+/* Variables
+ *  - - - - - - - - - - - - - - - - */
+/*doc
+ ---
+ title: Stencil
+ name: stencil
+ category: Libraries
+ ---
+
+[Stencil Mail](http://dijkstra.io/stencil-mail/docs/) has been included.
+*/
+/*doc
+ ---
+ title: Overview
+ name: 0-variables-overview
+ category: Variables
+ ---
+
+Variables can be overridden by being set before including the `_variables` partial.
+*/
+/*doc
+---
+title: Screen Sizes
+name: 1-screen-sizes
+category: Variables
+---
+
+Set break points which are used in break point mixins, utilities, text and visibility helpers.
+
+| Variable  | Default
+| ---       | ---
+| `$mobile` | 600px
+| `$lap`    | 750px
+| `$desk`   | 980px
+| `$gutter` | 45px
+*/
+/*doc
+---
+title: Text Sizes
+name: text-sizes
+category: Variables
+---
+
+| Variable    | Default
+| ---         | ---
+| `$text`     | 9px
+| `$text-xxs` | 11px
+| `$text-xs`  | 13px
+| `$text-sm`  | 18px
+| `$text-md`  | 25px
+| `$text-lg`  | 40px
+| `$text-xl`  | 60px
+| `$text-xxl` | 100px
+*/
+/*doc
+---
+title: Letter Spacing
+name: letter-spacing
+category: Variables
+---
+
+| Variable     | Default
+| ---          | ---
+| `$letter-sm` | 0.05em
+| `$letter-md` | 0.1em
+| `$letter-lg` | 0.3em
+*/
+/*doc
+---
+title: Line Height
+name: line-height
+category: Variables
+---
+
+| Variable   | Default
+| ---        | ---
+| `$line-xs` | 1.0
+| `$line-sm` | 1.25
+| `$line-md` | 1.5
+| `$line-lg` | 1.75
+| `$line-xl` | 2.0
+*/
+/*doc
+---
+title: Spacing
+name: spacing
+category: Variables
+---
+
+| Variable    | Default
+| ---         | ---
+| `$space-xs` | 10px
+| `$space-sm` | 15px
+| `$space-md` | 30px
+| `$space-lg` | 60px
+| `$space-xl` | 100px
+*/
+/*doc
+ ---
+ title: Overview
+ name: 0-mixins-overview
+ category: Mixins
+ ---
+
+Mixins should be used when the output of the included CSS changes or you need to repeat the same group of declarations.
+
+*/
+/*doc
+---
+title: Media Queries
+name: 1-media-queries
+category: Mixins
+---
+
+**Width**
+  
+You should implement a mobile first approach so you use `from` over `to`.
+  
++ `@from($device-width)`
++ `@to($device-width)`
+  
+The following shorthand mixins have been created for your convenience.
+  
+| Mixin                | Description
+| ---                  | ---
+| `@include mobile {}` | To mobile screen size
+| `@include lap{}`     | From lap screen size
+| `@include desk {}`   | From desk screen size
+  
+The value for these break-points is set in [variables][screen-sizes].
+*/
+/*doc
+---
+title: Background Image
+name: background-image
+category: Mixins
+---
+
+Cover background image.
+ 
+`@include background-image('image.png')`
+*/
+/*doc
+---
+title: Link
+name: link
+category: Mixins
+---
+
+Set color for link in all states.
+ 
+`@include a(black)`
+*/
+/*doc
+---
+title: Hyphenate
+name: hyphenate
+category: Mixins
+---
+
+Hyphenate text.
+ 
+`@include hyphenate`
+*/
+/*doc
+ ---
+ title: Overview
+ name: 0-utilities-overview
+ category: Utilities
+ ---
+
+Utilities are very specific and targeted, generally with a single property, sometimes with an !important suffix to ensure their property is modified.
+
+All utilities are prefixed by `u-` and can be optionally followed by one of the following break point abbreviations:
+
+*/
+/*doc
+ ---
+ title: Display
+ name: utilities-display
+ category: Utilities
+ ---
+
+Todo
+
+*/
+/*doc
+ ---
+ title: Image
+ name: utilities-image
+ category: Utilities
+ ---
+
+Todo
+
+*/
+/*doc
+---
+title: Spacing
+name: space
+category: Utilities
+---
+
+Space utilities are configured for `padding` only and come with size suffixes for `n`, `xs`, `sm`, `md`, `lg`, `xl`.
+
+The value for these break-points is set in [variables][spacing].
+
+If verbosity is not your thing you can use the shorthand version (in brackets).
+
+Classes are constructed as: `u-{{type}}-{{direction}}-{{size}}`  
+e.g. `u-padding-all-lg`
+
+Shorthand classes are constructed as `u-{{type}}{{direction}}{{size}}`  
+e.g. `u-palg`
+
+**Type**
+
++ `padding-` or `p`
++ `margin-` or `m`
+ 
+**Direction**
+
++ `top-` or `t`
++ `bottom-` `b`
++ `vertical-` `v`
++ `left-` `l`
++ `right-` `r`
++ `horizontal-` `h`
++ `all-` `a`
+ 
+**Size**
+
++ `xs`
++ `sm`
++ `md`
++ `lg`
++ `xl`
+
+```html_example
+<div class="u-padding-all-md">
+  Content
+</div>
+```
+*/
+/*doc
+ ---
+ title: Visibility
+ name: visibility
+ category: Utilities
+ ---
+
+Todo
+
+*/
+.u-hidden-lap,
+.u-visible-mobile {
+  display: block; }
+
+.u-visible-lap,
+.u-hidden-mobile {
+  display: block;
+  max-height: 0;
+  width: 0;
+  mso-hide: all;
+  overflow: hidden; }
+  .u-visible-lap *,
+  .u-hidden-mobile * {
+    mso-hide: all; }
+
+@media screen and (min-width: 750px) {
+  table[class="body"] .u-hidden-lap,
+  table[class="body"] .u-visible-mobile {
+    display: none !important; }
+  table[class="body"] .u-visible-lap,
+  table[class="body"] .u-hidden-mobile {
+    display: block !important;
+    max-height: 100000px !important;
+    width: auto !important;
+    overflow: visible !important; } }
+
+/*doc
+---
+title: Size
+name: 0-t-sizes
+category: Type
+---
+
+| Class       | Size
+| ---         | ---
+| `t-default` | [$text-default][text-sizes]
+| `t-xxs`     | [$text-xxs][text-sizes]
+| `t-xs`      | [$text-xs][text-sizes]
+| `t-sm`      | [$text-sm][text-sizes]
+| `t-md`      | [$text-md][text-sizes]
+| `t-lg`      | [$text-lg][text-sizes]
+| `t-xl`      | [$text-xl][text-sizes]
+| `t-xxl`     | [$text-xxl][text-sizes]
+
+```html_example
+<div class="t-xxs">Extra Extra Small</div>
+```
+
+```html_example
+<div class="t-xs">Extra Small</div>
+```
+
+```html_example
+<div class="t-sm">Small</div>
+```
+
+```html_example
+<div class="t-md">Medium</div>
+```
+
+```html_example
+<div class="t-lg">Large</div>
+```
+
+```html_example
+<div class="t-xl">Extra Large</div>
+```
+
+```html_example
+<div class="t-xxl">Extra Extra Large</div>
+```
+*/
+.u-table {
+  display: table;
+  width: 100%; }
+
+.u-table-cell {
+  display: table-cell;
+  vertical-align: middle; }
+
+.u-block {
+  display: block;
+  width: 100%; }
+
+.u-inline {
+  display: inline; }
+
+.u-inline-block {
+  display: inline-block; }
+
+.u-relative {
+  position: relative; }
+
+.u-absolute {
+  position: absolute; }
+
+.u-fixed {
+  position: fixed; }
+
+.u-static {
+  position: static; }
+
+.u-bottom {
+  bottom: 0; }
+
+.u-left {
+  left: 0; }
+
+.u-right {
+  right: 0; }
+
+.u-top {
+  top: 0; }
+
+.u-circle {
+  border-radius: 99999px; }
+
+.u-half {
+  width: 50%; }
+
+.u-full {
+  width: 100%; }
+
+.u-responsive {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto; }
+  .u-responsive.u-responsive--full {
+    width: 100%; }
+
+.u-center {
+  display: block;
+  margin: 0 auto; }
+
+.u-ptn,
+.u-padding-top-n,
+.u-pvn,
+.u-padding-vertical-n,
+.u-pan,
+.u-padding-all-n {
+  padding-top: 0 !important; }
+
+.u-ptxs,
+.u-padding-top-xs,
+.u-pvxs,
+.u-padding-vertical-xs,
+.u-paxs,
+.u-padding-all-xs {
+  padding-top: 10px !important; }
+
+.u-ptsm,
+.u-padding-top-sm,
+.u-pvsm,
+.u-padding-vertical-sm,
+.u-pasm,
+.u-padding-all-sm {
+  padding-top: 15px !important; }
+
+.u-ptmd,
+.u-padding-top-md,
+.u-pvmd,
+.u-padding-vertical-md,
+.u-pamd,
+.u-padding-all-md {
+  padding-top: 30px !important; }
+
+.u-ptlg,
+.u-padding-top-lg,
+.u-pvlg,
+.u-padding-vertical-lg,
+.u-palg,
+.u-padding-all-lg {
+  padding-top: 60px !important; }
+
+.u-ptxl,
+.u-padding-top-xl,
+.u-pvxl,
+.u-padding-vertical-xl,
+.u-paxl,
+.u-padding-all-xl {
+  padding-top: 100px !important; }
+
+.u-pbn,
+.u-padding-bottom-n,
+.u-pvn,
+.u-padding-vertical-n,
+.u-pan,
+.u-padding-all-n {
+  padding-bottom: 0 !important; }
+
+.u-pbxs,
+.u-padding-bottom-xs,
+.u-pvxs,
+.u-padding-vertical-xs,
+.u-paxs,
+.u-padding-all-xs {
+  padding-bottom: 10px !important; }
+
+.u-pbsm,
+.u-padding-bottom-sm,
+.u-pvsm,
+.u-padding-vertical-sm,
+.u-pasm,
+.u-padding-all-sm {
+  padding-bottom: 15px !important; }
+
+.u-pbmd,
+.u-padding-bottom-md,
+.u-pvmd,
+.u-padding-vertical-md,
+.u-pamd,
+.u-padding-all-md {
+  padding-bottom: 30px !important; }
+
+.u-pblg,
+.u-padding-bottom-lg,
+.u-pvlg,
+.u-padding-vertical-lg,
+.u-palg,
+.u-padding-all-lg {
+  padding-bottom: 60px !important; }
+
+.u-pbxl,
+.u-padding-bottom-xl,
+.u-pvxl,
+.u-padding-vertical-xl,
+.u-paxl,
+.u-padding-all-xl {
+  padding-bottom: 100px !important; }
+
+.u-pln,
+.u-padding-left-n,
+.u-phn,
+.u-padding-horizontal-n,
+.u-pan,
+.u-padding-all-n {
+  padding-left: 0 !important; }
+
+.u-plxs,
+.u-padding-left-xs,
+.u-phxs,
+.u-padding-horizontal-xs,
+.u-paxs,
+.u-padding-all-xs {
+  padding-left: 10px !important; }
+
+.u-plsm,
+.u-padding-left-sm,
+.u-phsm,
+.u-padding-horizontal-sm,
+.u-pasm,
+.u-padding-all-sm {
+  padding-left: 15px !important; }
+
+.u-plmd,
+.u-padding-left-md,
+.u-phmd,
+.u-padding-horizontal-md,
+.u-pamd,
+.u-padding-all-md {
+  padding-left: 30px !important; }
+
+.u-pllg,
+.u-padding-left-lg,
+.u-phlg,
+.u-padding-horizontal-lg,
+.u-palg,
+.u-padding-all-lg {
+  padding-left: 60px !important; }
+
+.u-plxl,
+.u-padding-left-xl,
+.u-phxl,
+.u-padding-horizontal-xl,
+.u-paxl,
+.u-padding-all-xl {
+  padding-left: 100px !important; }
+
+.u-prn,
+.u-padding-right-n,
+.u-phn,
+.u-padding-horizontal-n,
+.u-pan,
+.u-padding-all-n {
+  padding-right: 0 !important; }
+
+.u-prxs,
+.u-padding-right-xs,
+.u-phxs,
+.u-padding-horizontal-xs,
+.u-paxs,
+.u-padding-all-xs {
+  padding-right: 10px !important; }
+
+.u-prsm,
+.u-padding-right-sm,
+.u-phsm,
+.u-padding-horizontal-sm,
+.u-pasm,
+.u-padding-all-sm {
+  padding-right: 15px !important; }
+
+.u-prmd,
+.u-padding-right-md,
+.u-phmd,
+.u-padding-horizontal-md,
+.u-pamd,
+.u-padding-all-md {
+  padding-right: 30px !important; }
+
+.u-prlg,
+.u-padding-right-lg,
+.u-phlg,
+.u-padding-horizontal-lg,
+.u-palg,
+.u-padding-all-lg {
+  padding-right: 60px !important; }
+
+.u-prxl,
+.u-padding-right-xl,
+.u-phxl,
+.u-padding-horizontal-xl,
+.u-paxl,
+.u-padding-all-xl {
+  padding-right: 100px !important; }
+
+.t-xxs {
+  font-size: 11px; }
+
+.t-xs {
+  font-size: 13px; }
+
+.t-sm {
+  font-size: 18px; }
+
+.t-md {
+  font-size: 25px; }
+
+.t-lg {
+  font-size: 40px; }
+
+.t-xl {
+  font-size: 60px; }
+
+.t-xxl {
+  font-size: 100px; }
+
+.t-lssm,
+.t-letter-sm {
+  letter-spacing: 0.05em; }
+
+.t-lsmd,
+.t-letter-md {
+  letter-spacing: 0.1em; }
+
+.t-lslg,
+.t-letter-lg {
+  letter-spacing: 0.3em; }
+
+.t-c,
+.t-center {
+  text-align: center; }
+
+.t-al,
+.t-left {
+  text-align: left; }
+
+.t-ar,
+.t-right {
+  text-align: right; }
+
+.t-u,
+.t-uppercase {
+  text-transform: uppercase; }
+
+.t-l,
+.t-lowercase {
+  text-transform: lowercase; }
+
+.t-c,
+.t-capitalize {
+  text-transform: capitalize; }
+
+.t-u,
+.t-underline {
+  text-decoration: underline; }
+
+.t-n,
+.t-none {
+  text-decoration: none; }
+
+.t-lxs,
+.t-line-xs {
+  line-height: 1; }
+
+.t-lsm,
+.t-line-sm {
+  line-height: 1.25; }
+
+.t-lmd,
+.t-line-md {
+  line-height: 1.5; }
+
+.t-llg,
+.t-line-lg {
+  line-height: 1.75; }
+
+.t-lxl,
+.t-line-xl {
+  line-height: 2; }
+
+.t-h,
+.t-hyphenate {
+  -mds-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto; }
+
+/*doc
+ ---
+ title: Overview
+ name: 0-layout-overview
+ category: Layout
+ ---
+
+ The layout classes are derived from a modified version of Ink with padding removed and a wide break point added. It has also been configured to work with the screen sizes set in variables.
+
+*/
+/* Client-specific Styles and Reset */
+#outlook a {
+  padding: 0; }
+
+body {
+  width: 100% !important;
+  min-width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* .ExternalClass applies to Outlook.com (the artist formerly known as Hotmail)  */
+.ExternalClass {
+  width: 100%; }
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%; }
+
+#backgroundTable {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  line-height: 100% !important; }
+
+img {
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+  width: auto; }
+
+center {
+  width: 100%;
+  min-width: 580px; }
+
+a img {
+  border: none; }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+td {
+  border-collapse: collapse !important;
+  width: 100%; }
+
+table, tr, td {
+  padding: 0;
+  vertical-align: top;
+  text-align: left; }
+
+/*doc
+ ---
+ title: Alignment
+ name: alignment
+ category: Layout
+ ---
+
+Todo
+
+*/
+table.center, td.center {
+  text-align: center; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+/*doc
+ ---
+ title: Grid
+ name: grid
+ category: Layout
+ ---
+
+Todo
+
+*/
+table.body {
+  height: 100%;
+  width: 100%; }
+
+table.container {
+  width: 510px;
+  margin: 0 auto;
+  text-align: inherit; }
+  table.container.full {
+    width: 100% !important; }
+  table.container.wide {
+    width: 100%; }
+    @media screen and (min-width: 980px) {
+      table.container.wide {
+        width: 890px !important; } }
+
+table.row {
+  padding: 0px;
+  width: 100%;
+  position: relative; }
+
+table.container table.row {
+  display: block; }
+
+td.wrapper {
+  position: relative; }
+
+table.columns,
+table.column {
+  margin: 0 auto; }
+
+td.sub-column, td.sub-columns {
+  min-width: 0px; }
+
+table.one {
+  width: 46.25px; }
+
+table.two {
+  width: 92.5px; }
+
+table.three {
+  width: 138.75px; }
+
+table.four {
+  width: 185px; }
+
+table.five {
+  width: 231.25px; }
+
+table.six {
+  width: 277.5px; }
+
+table.seven {
+  width: 323.75px; }
+
+table.eight {
+  width: 370px; }
+
+table.nine {
+  width: 416.25px; }
+
+table.ten {
+  width: 462.5px; }
+
+table.eleven {
+  width: 508.75px; }
+
+table.twelve {
+  width: 555px; }
+
+table.one center {
+  min-width: 46.25px; }
+
+table.two center {
+  min-width: 92.5px; }
+
+table.three center {
+  min-width: 138.75px; }
+
+table.four center {
+  min-width: 185px; }
+
+table.five center {
+  min-width: 231.25px; }
+
+table.six center {
+  min-width: 277.5px; }
+
+table.seven center {
+  min-width: 323.75px; }
+
+table.eight center {
+  min-width: 370px; }
+
+table.nine center {
+  min-width: 416.25px; }
+
+table.ten center {
+  min-width: 462.5px; }
+
+table.eleven center {
+  min-width: 508.75px; }
+
+table.twelve center {
+  min-width: 555px; }
+
+.container {
+  width: 555px; }
+
+.block-grid {
+  max-width: 555px; }
+
+.two-up td {
+  width: 277.5px; }
+
+.three-up td {
+  width: 185px; }
+
+.four-up td {
+  width: 138.75px; }
+
+.five-up td {
+  width: 111px; }
+
+.six-up td {
+  width: 92.5px; }
+
+.seven-up td {
+  width: 79.2857142857px; }
+
+.eight-up td {
+  width: 69.375px; }
+
+.gutter {
+  min-width: 45px;
+  max-width: 45px;
+  width: 45px; }
+  @media screen and (max-width: 748px) {
+    .gutter:first-child {
+      min-width: 0 !important;
+      max-width: 0 !important;
+      width: 0 !important; } }
+
+@media screen and (min-width: 750px) {
+  table.one {
+    width: 55px !important; }
+  table.two {
+    width: 110px !important; }
+  table.three {
+    width: 165px !important; }
+  table.four {
+    width: 220px !important; }
+  table.five {
+    width: 275px !important; }
+  table.six {
+    width: 330px !important; }
+  table.seven {
+    width: 385px !important; }
+  table.eight {
+    width: 440px !important; }
+  table.nine {
+    width: 495px !important; }
+  table.ten {
+    width: 550px !important; }
+  table.eleven {
+    width: 605px !important; }
+  table.twelve {
+    width: 660px !important; }
+  table.one center {
+    min-width: 55px !important; }
+  table.two center {
+    min-width: 110px !important; }
+  table.three center {
+    min-width: 165px !important; }
+  table.four center {
+    min-width: 220px !important; }
+  table.five center {
+    min-width: 275px !important; }
+  table.six center {
+    min-width: 330px !important; }
+  table.seven center {
+    min-width: 385px !important; }
+  table.eight center {
+    min-width: 440px !important; }
+  table.nine center {
+    min-width: 495px !important; }
+  table.ten center {
+    min-width: 550px !important; }
+  table.eleven center {
+    min-width: 605px !important; }
+  table.twelve center {
+    min-width: 660px !important; }
+  .container {
+    width: 660px !important; }
+  .block-grid {
+    max-width: 660px; }
+  .two-up td {
+    width: 330px !important; }
+  .three-up td {
+    width: 220px !important; }
+  .four-up td {
+    width: 165px !important; }
+  .five-up td {
+    width: 132px !important; }
+  .six-up td {
+    width: 110px !important; }
+  .seven-up td {
+    width: 94.2857142857px !important; }
+  .eight-up td {
+    width: 82.5px !important; } }
+
+.body .columns td.one,
+.body .column td.one {
+  width: 8.333333%; }
+
+.body .columns td.two,
+.body .column td.two {
+  width: 16.666666%; }
+
+.body .columns td.three,
+.body .column td.three {
+  width: 25%; }
+
+.body .columns td.four,
+.body .column td.four {
+  width: 33.333333%; }
+
+.body .columns td.five,
+.body .column td.five {
+  width: 41.666666%; }
+
+.body .columns td.six,
+.body .column td.six {
+  width: 50%; }
+
+.body .columns td.seven,
+.body .column td.seven {
+  width: 58.333333%; }
+
+.body .columns td.eight,
+.body .column td.eight {
+  width: 66.666666%; }
+
+.body .columns td.nine,
+.body .column td.nine {
+  width: 75%; }
+
+.body .columns td.ten,
+.body .column td.ten {
+  width: 83.333333%; }
+
+.body .columns td.eleven,
+.body .column td.eleven {
+  width: 91.666666%; }
+
+.body .columns td.twelve,
+.body .column td.twelve {
+  width: 100%; }
+
+td.expander {
+  visibility: hidden;
+  width: 0px;
+  padding: 0 !important; }
+
+@media screen and (max-width: 689px) {
+  table[class="body"] center {
+    min-width: 0 !important; }
+  table[class="body"] .container {
+    width: 100% !important; }
+    table[class="body"] .container.full {
+      width: 100% !important; }
+  table[class="body"] .row {
+    width: 100% !important;
+    display: block !important; }
+  table[class="body"] .wrapper {
+    display: block !important;
+    padding-right: 0 !important; }
+  table[class="body"] .columns,
+  table[class="body"] .column {
+    table-layout: fixed !important;
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: block !important; }
+  table[class="body"] .wrapper.first .columns,
+  table[class="body"] .wrapper.first .column {
+    display: table !important; }
+  table[class="body"] table.columns td,
+  table[class="body"] table.column td {
+    width: 100% !important; }
+  table[class="body"] .columns td.one,
+  table[class="body"] .column td.one {
+    width: 8.333333% !important; }
+  table[class="body"] .columns td.two,
+  table[class="body"] .column td.two {
+    width: 16.666666% !important; }
+  table[class="body"] .columns td.three,
+  table[class="body"] .column td.three {
+    width: 25% !important; }
+  table[class="body"] .columns td.four,
+  table[class="body"] .column td.four {
+    width: 33.333333% !important; }
+  table[class="body"] .columns td.five,
+  table[class="body"] .column td.five {
+    width: 41.666666% !important; }
+  table[class="body"] .columns td.six,
+  table[class="body"] .column td.six {
+    width: 50% !important; }
+  table[class="body"] .columns td.seven,
+  table[class="body"] .column td.seven {
+    width: 58.333333% !important; }
+  table[class="body"] .columns td.eight,
+  table[class="body"] .column td.eight {
+    width: 66.666666% !important; }
+  table[class="body"] .columns td.nine,
+  table[class="body"] .column td.nine {
+    width: 75% !important; }
+  table[class="body"] .columns td.ten,
+  table[class="body"] .column td.ten {
+    width: 83.333333% !important; }
+  table[class="body"] .columns td.eleven,
+  table[class="body"] .column td.eleven {
+    width: 91.666666% !important; }
+  table[class="body"] .columns td.twelve,
+  table[class="body"] .column td.twelve {
+    width: 100% !important; }
+  table[class="body"] td.offset-by-one,
+  table[class="body"] td.offset-by-two,
+  table[class="body"] td.offset-by-three,
+  table[class="body"] td.offset-by-four,
+  table[class="body"] td.offset-by-five,
+  table[class="body"] td.offset-by-six,
+  table[class="body"] td.offset-by-seven,
+  table[class="body"] td.offset-by-eight,
+  table[class="body"] td.offset-by-nine,
+  table[class="body"] td.offset-by-ten,
+  table[class="body"] td.offset-by-eleven {
+    padding-left: 0 !important; }
+  table[class="body"] table.columns td.expander {
+    width: 1px !important; } }
+
+/* Outlook First */
+body.outlook p {
+  display: inline !important; }
+
+/*doc
+ ---
+ title: Banner
+ name: banner
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container full">
+          <tr>
+            <td>
+              <a href="#" class="u-hidden-lap" target="_blank">
+                <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+              </a>
+
+              <a href="#" class="u-hidden-mobile" target="_blank">
+                <img src="http://placehold.it/500x500&text=Dekstop%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+              </a>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+/*doc
+ ---
+ title: Centered
+ name: centered
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+              <table class="row u-pvlg">
+                <tr>
+                  <td class="wrapper last">
+                    <table class="twelve columns">
+                      <tr>
+                        <td class="t-center">
+                          <div class="u-padding-vertical-lg">
+                            <a href="#" class="u-hidden-lap" target="_blank">
+                              <img src="http://placehold.it/250x250&text=Mobile%20Image" class="u-responsive" alt="Alt" />
+                            </a>
+
+                            <a href="#" class="u-hidden-mobile" target="_blank">
+                              <img src="http://placehold.it/500x500&text=Dekstop%20Image" class="u-responsive" alt="Alt" />
+                            </a>
+                          </div>
+
+                          <div>
+                            By Someone<br />From Somewhere
+                          </div>
+                        </td>
+
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                </tr>
+              </table>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+/*doc
+ ---
+ title: Flag
+ name: flag
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+              <table class="flag">
+                <tr>
+                  <td class="flag-body">&nbsp;</td>
+
+                  <td class="flag-image">
+                    <a href="#" target="_blank"><img src="http://placehold.it/150x150&text=Centered%20Image" alt="Alt" class="u-responsive u-responsive--full" /></a>
+                  </td>
+
+                  <td class="flag-body">
+                    <div><a href="#" target="_blank">Some Girl</a></div>
+                    <div>Venture Partner at<br /><a href="#" target="_blank">A Good Company</a></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+.flag {
+  border-collapse: collapse;
+  width: 100%; }
+
+.flag-image {
+  max-width: 220px;
+  min-width: 220px;
+  width: auto; }
+  @media screen and (max-width: 748px) {
+    .flag-image {
+      max-width: 170px !important;
+      min-width: 170px !important; } }
+  @media screen and (min-width: 750px) {
+    .flag-image {
+      max-width: 270px !important;
+      min-width: 270px !important; } }
+
+.flag-body {
+  width: 50%;
+  vertical-align: middle; }
+  @media screen and (max-width: 748px) {
+    .flag-body:first-child {
+      max-width: 0px !important;
+      min-width: 0px !important;
+      width: auto !important; } }
+  @media screen and (max-width: 748px) {
+    .flag-body:last-child {
+      width: 100% !important; } }
+
+/*doc
+ ---
+ title: Grid
+ name: grid
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+              <table class="row u-ptlg">
+                <tr>
+                  <td class="wrapper">
+                    <table class="one columns">
+                      <tr>
+                        <td class="t-center">
+                          One
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="wrapper last">
+                    <table class="eleven columns">
+                      <tr>
+                        <td class="t-center">
+                          Eleven
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <table class="row u-ptlg">
+                <tr>
+                  <td class="wrapper">
+                    <table class="two columns">
+                      <tr>
+                        <td class="t-center">
+                          Two
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="wrapper last">
+                    <table class="ten columns">
+                      <tr>
+                        <td class="t-center">
+                          Ten
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <table class="row u-ptlg">
+                <tr>
+                  <td class="wrapper">
+                    <table class="three columns">
+                      <tr>
+                        <td class="t-center">
+                          Three
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="wrapper last">
+                    <table class="nine columns">
+                      <tr>
+                        <td class="t-center">
+                          Nine
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <table class="row u-ptlg">
+                <tr>
+                  <td class="wrapper">
+                    <table class="four columns">
+                      <tr>
+                        <td class="t-center">
+                          Four
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="wrapper last">
+                    <table class="eight columns">
+                      <tr>
+                        <td class="t-center">
+                          Eight
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <table class="row u-ptlg">
+                <tr>
+                  <td class="wrapper">
+                    <table class="five columns">
+                      <tr>
+                        <td class="t-center">
+                          Five
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="wrapper last">
+                    <table class="seven columns">
+                      <tr>
+                        <td class="t-center">
+                          Seven
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <table class="row u-pvlg">
+                <tr>
+                  <td class="wrapper">
+                    <table class="six columns">
+                      <tr>
+                        <td class="t-center">
+                          Six
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="wrapper last">
+                    <table class="six columns">
+                      <tr>
+                        <td class="t-center">
+                          Six
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+/*doc
+ ---
+ title: Mailchimp
+ name: mailchimp
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center class="mailchimp u-padding-top-sm u-padding-bottom-md">
+        <table class="container">
+          <tr>
+            <td>
+              <table class="row">
+                <tr>
+                  <td class="wrapper last">
+
+                    <table class="twelve columns">
+                      <tr>
+                        <td class="t-center">
+                          <p class="u-text-xs t-center">
+                            Copyright &copy; 2015
+                          </p>
+
+                          <p class="u-text-xs t-center">
+                            Collaborative Fund.
+                          </p>
+
+                          <p class="u-text-xs t-center">
+                            All rights reserved.
+                          </p>
+
+                          <p class="u-text-xs t-center u-ptmd">
+                            <a href="*|UNSUB|*">Unsubscribe?</a>
+                          </p>
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+.mailchimp {
+  background: black;
+  color: white; }
+  .mailchimp a {
+    color: white !important; }
+    .mailchimp a:hover, .mailchimp a:visited, .mailchimp a:focus, .mailchimp a:active {
+      color: white !important; }
+
+.dijitMenuItemLabel {
+  color: black; }
+
+/*doc
+ ---
+ title: Media
+ name: media
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container full">
+          <tr>
+            <td>
+              <div class="media">
+                <div class="media-image">
+                  <a href="#" class="u-hidden-lap" target="_blank">
+                    <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+                  </a>
+
+                  <a href="#" class="u-hidden-mobile" target="_blank">
+                    <img src="http://placehold.it/125x125&text=Dekstop%20Image" class="u-responsive u-responsive--full" alt="Alt" />
+                  </a>
+                </div>
+
+                <div class="media-body">
+                  <table>
+                    <tr>
+                      <td>
+                        <div>A witty title.</div>
+                        <div>Some text with a <a href="#" target="_blank">Link</a>, and another <a href="" target="_blank">Link</a>.</div>
+                        <a href="#" target="_blank">Link</a>
+                      </td>
+
+                      <td class="gutter u-tam">
+                        {% include 'social_links' %}
+                      </td>
+
+                      <td class="expander"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+@media screen and (min-width: 750px) {
+  .media {
+    display: table !important;
+    width: 100% !important; } }
+
+.media-image,
+.media-body {
+  display: block;
+  width: 100%; }
+  @media screen and (min-width: 750px) {
+    .media-image,
+    .media-body {
+      display: table-cell !important;
+      width: 50% !important; } }
+
+.media-body {
+  vertical-align: middle; }
+
+/*doc
+ ---
+ title: Split
+ name: split
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td class="split">
+              <div class="pull-right">
+                <div><a href="#">Some Guy</a></div>
+                <div>Founder of Some<br />Company.</div>
+              </div>
+            </td>
+
+            <td class="split image">
+              <div class="pull-left">
+                <img src="http://placehold.it/150x150&text=Centered%20Image" alt="Alt" />
+              </div>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+.split {
+  width: 50%;
+  vertical-align: bottom; }
+  .split.image {
+    line-height: 0; }
+
+/*doc
+ ---
+ title: Stacked
+ name: stacked
+ category: Components
+ ---
+
+```html_example
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container wide">
+          <tr>
+            <td>
+              <div class="media">
+                <div class="media-image">
+                  <div class="t-center u-padding-vertical-lg">
+                    When you have content on the top …
+                  </div>
+                </div>
+
+                <div class="media-body">
+                  <div class="t-center u-padding-vertical-lg">
+                    You might want it on the side on desk.
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+/*doc
+ ---
+ title: Two Columns
+ name: two-columns
+ category: Components
+ ---
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+              <table class="row u-pvlg">
+                <tr>
+                  <td class="wrapper">
+                    <table class="six columns">
+                      <tr>
+                        <td class="t-center">
+                          <div class="u-padding-vertical-lg">
+                            When you have content on the left …
+                          </div>
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td class="wrapper last">
+                    <table class="six columns">
+                      <tr>
+                        <td class="t-center">
+                          <div class="u-padding-vertical-lg">
+                            You will undobtedly want content on the right.
+                          </div>
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                </tr>
+              </table>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
+/**
+ *  Base
+ *  - - - - - - - - - - - - - - - - */
+body {
+  color: #000;
+  font-size: 18px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  word-break: normal; }
+
+p {
+  line-height: 1.25; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+li {
+  margin: 0; }
+
+hr {
+  background-color: #000;
+  border: none;
+  color: #000;
+  height: 1px; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover, a:active, a:focus, a:visited {
+    outline: 0;
+    color: #000;
+    text-decoration: none; }

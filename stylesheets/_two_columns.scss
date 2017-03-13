@@ -1,0 +1,54 @@
+/*doc
+ ---
+ title: Two Columns
+ name: two-columns
+ category: Components
+ ---
+<table class="body" align="center">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+              <table class="row u-pvlg">
+                <tr>
+                  <td class="wrapper">
+                    <table class="six columns">
+                      <tr>
+                        <td class="t-center">
+                          <div class="u-padding-vertical-lg">
+                            When you have content on the left …
+                          </div>
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td class="wrapper last">
+                    <table class="six columns">
+                      <tr>
+                        <td class="t-center">
+                          <div class="u-padding-vertical-lg">
+                            You will undobtedly want content on the right.
+                          </div>
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                </tr>
+              </table>
+            </td>
+
+            <td class="expander"></td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+```
+*/
